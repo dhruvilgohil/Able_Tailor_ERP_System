@@ -1,0 +1,99 @@
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\bin\Debug\net8.0\appsettings.Development.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\bin\Debug\net8.0\appsettings.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\bin\Debug\net8.0\Able_Tailor_ERP_System.staticwebassets.runtime.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\bin\Debug\net8.0\Able_Tailor_ERP_System.staticwebassets.endpoints.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\bin\Debug\net8.0\Able_Tailor_ERP_System.exe
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\bin\Debug\net8.0\Able_Tailor_ERP_System.deps.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\bin\Debug\net8.0\Able_Tailor_ERP_System.runtimeconfig.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\bin\Debug\net8.0\Able_Tailor_ERP_System.dll
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\bin\Debug\net8.0\Able_Tailor_ERP_System.pdb
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.GeneratedMSBuildEditorConfig.editorconfig
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.AssemblyInfoInputs.cache
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.AssemblyInfo.cs
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.csproj.CoreCompileInputs.cache
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.MvcApplicationPartsAssemblyInfo.cache
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.RazorAssemblyInfo.cache
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.RazorAssemblyInfo.cs
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\scopedcss\bundle\Able_Tailor_ERP_System.styles.css
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\scopedcss\projectbundle\Able_Tailor_ERP_System.bundle.scp.css
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\staticwebassets.build.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\staticwebassets.development.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.dll
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\refint\Able_Tailor_ERP_System.dll
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.pdb
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.genruntimeconfig.cache
+D:\.NET(6-sem)\Able_Tailor_ERP_System\Able_Tailor_ERP_System\obj\Debug\net8.0\ref\Able_Tailor_ERP_System.dll
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\bin\Debug\net8.0\appsettings.Development.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\bin\Debug\net8.0\appsettings.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\bin\Debug\net8.0\Able_Tailor_ERP_System.staticwebassets.runtime.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\bin\Debug\net8.0\Able_Tailor_ERP_System.staticwebassets.endpoints.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\bin\Debug\net8.0\Able_Tailor_ERP_System.exe
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\bin\Debug\net8.0\Able_Tailor_ERP_System.deps.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\bin\Debug\net8.0\Able_Tailor_ERP_System.runtimeconfig.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\bin\Debug\net8.0\Able_Tailor_ERP_System.dll
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\bin\Debug\net8.0\Able_Tailor_ERP_System.pdb
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.GeneratedMSBuildEditorConfig.editorconfig
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.AssemblyInfoInputs.cache
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.AssemblyInfo.cs
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.csproj.CoreCompileInputs.cache
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.MvcApplicationPartsAssemblyInfo.cache
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.RazorAssemblyInfo.cache
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.RazorAssemblyInfo.cs
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\scopedcss\bundle\Able_Tailor_ERP_System.styles.css
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\scopedcss\projectbundle\Able_Tailor_ERP_System.bundle.scp.css
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\staticwebassets.build.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\staticwebassets.development.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.dll
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\refint\Able_Tailor_ERP_System.dll
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.pdb
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.genruntimeconfig.cache
+D:\.NET(6-sem)\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\ref\Able_Tailor_ERP_System.dll
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\bin\Debug\net8.0\appsettings.Development.json
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\bin\Debug\net8.0\appsettings.json
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\bin\Debug\net8.0\Able_Tailor_ERP_System.staticwebassets.runtime.json
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\bin\Debug\net8.0\Able_Tailor_ERP_System.staticwebassets.endpoints.json
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\bin\Debug\net8.0\Able_Tailor_ERP_System.exe
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\bin\Debug\net8.0\Able_Tailor_ERP_System.deps.json
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\bin\Debug\net8.0\Able_Tailor_ERP_System.runtimeconfig.json
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\bin\Debug\net8.0\Able_Tailor_ERP_System.dll
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\bin\Debug\net8.0\Able_Tailor_ERP_System.pdb
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.GeneratedMSBuildEditorConfig.editorconfig
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.AssemblyInfoInputs.cache
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.AssemblyInfo.cs
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.csproj.CoreCompileInputs.cache
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.MvcApplicationPartsAssemblyInfo.cache
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.RazorAssemblyInfo.cache
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.RazorAssemblyInfo.cs
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\scopedcss\bundle\Able_Tailor_ERP_System.styles.css
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\scopedcss\projectbundle\Able_Tailor_ERP_System.bundle.scp.css
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\staticwebassets.build.json
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\staticwebassets.development.json
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.dll
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\refint\Able_Tailor_ERP_System.dll
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.pdb
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.genruntimeconfig.cache
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\ref\Able_Tailor_ERP_System.dll

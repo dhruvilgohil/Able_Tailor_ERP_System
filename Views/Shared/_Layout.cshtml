@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Able Tailor ERP</title>
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <h2>Able Tailor</h2>
+                <p>Men's Wear</p>
+            </div>
+
+            <span class="menu-title">Menu</span>
+
+            <ul class="sidebar-menu">
+                <li><a asp-controller="Dashboard" asp-action="Index"><i class="fa fa-home"></i> Dashboard</a></li>
+                <li><a asp-controller="Orders" asp-action="Index"><i class="fa fa-box"></i> Orders</a></li>
+                <li><a asp-controller="Customers" asp-action="Index"><i class="fa fa-users"></i> Customers</a></li>
+                <li><a asp-controller="Inventory" asp-action="Index"><i class="fa fa-warehouse"></i> Inventory</a></li>
+                <li><a asp-controller="Income" asp-action="Index"><i class="fa fa-money-bill"></i> Income</a></li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <a asp-controller="Measurement" asp-action="Create" class="btn-measure">
+                    New Measurement
+                </a>
+            </div>
+
+        </aside>
+
+        <!-- MAIN AREA -->
+        <div class="main-content">
+
+            <!-- TOPBAR -->
+            <div class="topbar">
+
+                <div class="page-title" style="display:flex;">
+                    <h4 style="color:#4E6097">Admin > </h4>
+                    <h4 style="margin-left:5px">@ViewData["Title"]</h4>
+                </div>
+
+                <div class="search-wrapper">
+                    <i class="fa fa-search search-icon"></i>
+                    <input type="text" placeholder="Search orders, customers, fabrics..." />
+                </div>
+
+                <div class="profile">
+                    <div class="avatar"></div>
+                    <div>
+                        <strong>Able Tailor</strong><br />
+                        <small>Master Tailor</small>
+                    </div>
+                </div>
+            </div>
+            <!-- PAGE CONTENT -->
+            <div class="page-content">
+                @RenderBody()
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

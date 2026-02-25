@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Orders";
+}
+
+<div class="orders-wrapper">
+
+    <!-- ===== FILTER TABS ===== -->
+    <div class="order-tabs">
+        <button class="tab active">All Orders</button>
+        <button class="tab">Pending</button>
+        <button class="tab">On Working</button>
+        <button class="tab">Complete</button>
+    </div>
+
+    <div class="table-header-card">
+        <div>Customer Name</div>
+        <div>Services</div>
+        <div>Status</div>
+        <div>Assigned Tailor</div>
+        <div>Date</div>
+        <div></div>
+    </div>
+
+    <div class="table-body-card">
+
+        <div class="table-row">
+            <div>Jonathan Sterling</div>
+            <div>1 Pair</div>
+            <div><span class="status working">On Working</span></div>
+            <div>Jonathan Sterling</div>
+            <div>12-02-2026</div>
+            <div><button class="btn-view">View</button></div>
+        </div>
+
+        <div class="table-row">
+            <div>Jonathan Sterling</div>
+            <div>2 Pair</div>
+            <div><span class="status start">Start</span></div>
+            <div>Jonathan Sterling</div>
+            <div>12-02-2026</div>
+            <div><button class="btn-view">View</button></div>
+        </div>
+
+        <div class="table-row">
+            <div>Jonathan Sterling</div>
+            <div>5 Pair</div>
+            <div><span class="status complete">Complete</span></div>
+            <div>Jonathan Sterling</div>
+            <div>12-02-2026</div>
+            <div><button class="btn-view">View</button></div>
+        </div>
+
+        <div class="table-row">
+            <div>Jonathan Sterling</div>
+            <div>5 Pair</div>
+            <div><span class="status complete">Complete</span></div>
+            <div>Jonathan Sterling</div>
+            <div>12-02-2026</div>
+            <div><button class="btn-view">View</button></div>
+        </div>
+
+        <div class="table-row">
+            <div>Jonathan Sterling</div>
+            <div>2 Pair</div>
+            <div><span class="status start">Start</span></div>
+            <div>Jonathan Sterling</div>
+            <div>12-02-2026</div>
+            <div><button class="btn-view">View</button></div>
+        </div>
+
+    </div>
+
+    <!-- ===== PAGINATION ===== -->
+    <div class="pagination">
+        <button class="page-arrow">&#10094;</button>
+
+        <button class="page-number active">1</button>
+        <button class="page-number">2</button>
+        <button class="page-number">3</button>
+        <span class="dots">....</span>
+        <button class="page-number">5</button>
+
+        <button class="page-arrow">&#10095;</button>
+    </div>
+
+</div>

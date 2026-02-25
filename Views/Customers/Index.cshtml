@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Customers";
+}
+
+<div class="customers-wrapper">
+
+    <!-- ===== TABLE HEADER BOX ===== -->
+    <div class="table-header-box">
+        <div class="header-row">
+            <div class="col name">Customer Name</div>
+            <div class="col contact">Contact No</div>
+            <div class="col action">View</div>
+            <div class="col action">Edit</div>
+            <div class="col action">Delete</div>
+        </div>
+    </div>
+
+    <!-- ===== TABLE BODY BOX ===== -->
+    <div class="table-body-box">
+
+        @for (int i = 0; i < 9; i++)
+        {
+            <div class="body-row">
+                <div class="col name">Jonathan Sterling</div>
+                <div class="col contact">1526347890</div>
+                <div class="col action">
+                    <button class="btn-view">View</button>
+                </div>
+                <div class="col action">
+                    <button class="btn-edit"><i class="fa-regular fa-pen-to-square"></i></button>
+                </div>
+                <div class="col action">
+                    <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>
+        }
+
+    </div>
+
+    <!-- ===== PAGINATION ===== -->
+    <div class="pagination">
+        <button class="page-arrow">&#10094;</button>
+        <button class="page-number active">1</button>
+        <button class="page-number">2</button>
+        <button class="page-number">3</button>
+        <span class="dots">....</span>
+        <button class="page-number">5</button>
+        <button class="page-arrow">&#10095;</button>
+    </div>
+
+</div>

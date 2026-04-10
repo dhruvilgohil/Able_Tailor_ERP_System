@@ -97,3 +97,4 @@ D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_
 D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.pdb
 D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.genruntimeconfig.cache
 D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\ref\Able_Tailor_ERP_System.dll
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\obj\Debug\net8.0\Able_Tailor_ERP_System.sourcelink.json

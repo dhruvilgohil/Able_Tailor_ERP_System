@@ -7,6 +7,6 @@ namespace Able_Tailor_ERP_System.Controllers
         public IActionResult Index()
         {
             return View();
-        }
+        } 
     }
 }

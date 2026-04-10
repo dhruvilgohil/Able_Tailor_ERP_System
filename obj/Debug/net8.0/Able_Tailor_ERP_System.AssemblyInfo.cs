@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Able_Tailor_ERP_System")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56187fa4ebde50b1a42a2af37bf8e481d27fd5a5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Able_Tailor_ERP_System")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Able_Tailor_ERP_System")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

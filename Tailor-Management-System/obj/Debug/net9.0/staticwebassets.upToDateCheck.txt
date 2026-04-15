@@ -1,0 +1,10 @@
+wwwroot\assets\index-BHgEi89n.css
+wwwroot\assets\index-DhqI8ZcJ.js
+wwwroot\index.html
+wwwroot\js\site.js
+wwwroot\vite.svg
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\wwwroot\index.html
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\wwwroot\vite.svg
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\wwwroot\assets\index-DhqI8ZcJ.js
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\wwwroot\assets\index-BHgEi89n.css
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\wwwroot\js\site.js

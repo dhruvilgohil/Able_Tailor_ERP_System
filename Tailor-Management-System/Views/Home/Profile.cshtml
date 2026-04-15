@@ -1,0 +1,90 @@
+@{
+    ViewData["Title"] = "Profile";
+    var fullName = Context.Session.GetString("fullName") ?? "Tailor";
+    var shopName = Context.Session.GetString("shopName") ?? "Shop";
+    var email = Context.Session.GetString("email") ?? "";
+}
+
+<div style="display:flex;flex-direction:column;gap:var(--spacing-2xl);max-width:700px;margin:0 auto;">
+    <!-- Profile Header Card -->
+    <div style="background:linear-gradient(135deg,#4F46E5 0%,#818CF8 100%);border-radius:12px;padding:40px;color:white;text-align:center;position:relative;">
+        <div style="width:80px;height:80px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+            <i data-lucide="user-circle" style="width:48px;height:48px;color:white;"></i>
+        </div>
+        <h2 style="font-size:26px;font-weight:800;margin-bottom:4px;" id="display-fullname">@fullName</h2>
+        <p style="opacity:.85;font-size:15px;" id="display-shopname">@shopName</p>
+        <p style="opacity:.7;font-size:13px;margin-top:4px;">Master Tailor</p>
+    </div>
+
+    <!-- Info / Edit Card -->
+    <div style="background:white;border-radius:12px;padding:var(--spacing-2xl);box-shadow:var(--shadow-sm);">
+        <!-- View Mode -->
+        <div id="view-mode">
+            <h3 style="font-size:20px;font-weight:700;margin-bottom:var(--spacing-lg);">Your Information</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:32px;">
+                <div><p style="font-size:12px;font-weight:600;color:#6B7280;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Full Name</p><p style="font-weight:600;font-size:16px;" id="v-fullname">@fullName</p></div>
+                <div><p style="font-size:12px;font-weight:600;color:#6B7280;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Shop Name</p><p style="font-weight:600;font-size:16px;" id="v-shopname">@shopName</p></div>
+                <div><p style="font-size:12px;font-weight:600;color:#6B7280;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Email</p><p style="font-weight:500;color:var(--text-secondary);">@email</p></div>
+                <div><p style="font-size:12px;font-weight:600;color:#6B7280;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Role</p><p style="font-weight:600;">Master Tailor</p></div>
+            </div>
+            <button class="btn-primary-full" onclick="startEdit()">Edit Profile</button>
+        </div>
+
+        <!-- Edit Mode -->
+        <div id="edit-mode" style="display:none;">
+            <h3 style="font-size:20px;font-weight:700;margin-bottom:var(--spacing-lg);">Edit Profile</h3>
+            <form onsubmit="event.preventDefault(); saveProfile();">
+                <div style="display:flex;flex-direction:column;gap:var(--spacing-lg);">
+                    <div class="form-field"><label>Full Name *</label><input type="text" id="e-fullname" value="@fullName" required /></div>
+                    <div class="form-field"><label>Shop Name *</label><input type="text" id="e-shopname" value="@shopName" required /></div>
+                    <div class="form-field"><label>Email (read-only)</label><input type="email" value="@email" readonly style="background:#F9FAFB;color:#9CA3AF;cursor:not-allowed;" /></div>
+                </div>
+                <div style="display:flex;gap:var(--spacing-md);margin-top:var(--spacing-lg);">
+                    <button type="submit" class="btn-primary-full" id="save-profile-btn" style="flex:1;">Save Changes</button>
+                    <button type="button" onclick="cancelEdit()" style="flex:1;padding:var(--spacing-md);background:transparent;border:1px solid var(--border);border-radius:var(--radius-md);cursor:pointer;font-size:var(--text-base);color:var(--text-secondary);">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+function startEdit() {
+    document.getElementById('view-mode').style.display = 'none';
+    document.getElementById('edit-mode').style.display = 'block';
+}
+function cancelEdit() {
+    document.getElementById('edit-mode').style.display = 'none';
+    document.getElementById('view-mode').style.display = 'block';
+}
+async function saveProfile() {
+    const fullName = document.getElementById('e-fullname').value.trim();
+    const shopName = document.getElementById('e-shopname').value.trim();
+    if (!fullName || !shopName) return showToast('Name and shop name required', 'error');
+    const btn = document.getElementById('save-profile-btn');
+    btn.textContent = 'Saving...'; btn.disabled = true;
+    try {
+        const data = await apiFetch('/api/auth/profile', 'PUT', { fullName, shopName });
+        await fetch('/Auth/UpdateSession', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ fullName, shopName, token: data.token })
+        });
+        document.getElementById('v-fullname').textContent = fullName;
+        document.getElementById('v-shopname').textContent = shopName;
+        document.getElementById('display-fullname').textContent = fullName;
+        document.getElementById('display-shopname').textContent = shopName;
+        const sidebarLogo = document.querySelector('.sidebar-logo h1');
+        if (sidebarLogo) sidebarLogo.textContent = shopName;
+        if (data.token) document.querySelector('meta[name="auth-token"]')?.setAttribute('content', data.token);
+        cancelEdit();
+        showToast('Profile updated!');
+    } catch(e) {
+        showToast('Update failed: ' + e.message, 'error');
+    } finally {
+        btn.textContent = 'Save Changes'; btn.disabled = false;
+    }
+}
+</script>
+}

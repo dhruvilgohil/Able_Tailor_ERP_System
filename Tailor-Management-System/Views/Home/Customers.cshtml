@@ -1,0 +1,236 @@
+@{
+    ViewData["Title"] = "Customers";
+}
+
+<div style="display:flex;flex-direction:column;gap:var(--spacing-2xl);">
+    <!-- Action Bar (React: just a simple button) -->
+    <div class="action-bar">
+        <button class="add-btn" onclick="openAddModal()">Add Customer</button>
+    </div>
+
+    <!-- Table (React: bg-base, radius-lg, border, shadow-sm, overflow hidden) -->
+    <div class="table-wrapper">
+        <div id="cust-loading" style="padding:32px;text-align:center;color:#9CA3AF;">Loading...</div>
+        <table class="data-table" id="cust-table" style="display:none;">
+            <thead>
+                <tr>
+                    <th>Customer Name</th>
+                    <th>Contact No</th>
+                    <th>Address</th>
+                    <th style="text-align:center;">View</th>
+                    <th style="text-align:center;">Edit</th>
+                    <th style="text-align:center;">Delete</th>
+                </tr>
+            </thead>
+            <tbody id="cust-tbody"></tbody>
+        </table>
+    </div>
+
+    <!-- Pagination Controls -->
+    <div id="pagination-controls" style="display:none; justify-content: space-between; align-items: center; padding: 16px; background-color: var(--surface); border: 1px solid var(--border); border-top: none; border-bottom-left-radius: var(--radius-lg); border-bottom-right-radius: var(--radius-lg);">
+        <span id="pagination-info" style="color: var(--text-secondary); font-size: 14px;"></span>
+        <div style="display: flex; gap: 8px;">
+            <button id="btn-prev" onclick="prevPage()" style="padding: 8px 12px; border: 1px solid var(--border); border-radius: var(--radius-md); background-color: white; cursor: pointer; color: var(--text-primary); display: flex; align-items: center; gap: 4px;">
+                <i data-lucide="chevron-left" style="width:16px;height:16px;"></i> Prev
+            </button>
+            <span id="pagination-pages" style="display: flex; align-items: center; padding: 0 12px; font-weight: 500; color: var(--text-primary);"></span>
+            <button id="btn-next" onclick="nextPage()" style="padding: 8px 12px; border: 1px solid var(--border); border-radius: var(--radius-md); background-color: white; cursor: pointer; color: var(--text-primary); display: flex; align-items: center; gap: 4px;">
+                Next <i data-lucide="chevron-right" style="width:16px;height:16px;"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Add Customer -->
+<div class="modal-overlay" id="add-modal">
+    <div class="modal-box">
+        <div class="modal-header-title">
+            <h2 id="modal-main-title">Add Customer</h2>
+            <p id="modal-main-sub">Fill out the form below to add a new customer</p>
+        </div>
+        <div class="modal-divider"></div>
+        <form onsubmit="event.preventDefault(); saveCustomer();">
+            <input type="hidden" id="edit-id" />
+            <div class="form-field"><label>Customer Name *</label><input type="text" id="f-name" placeholder="Enter customer name" required /></div>
+            <div class="form-field"><label>Contact No *</label><input type="text" id="f-contact" placeholder="Enter contact number" required /></div>
+            <div class="form-field"><label>Address</label><input type="text" id="f-address" placeholder="Enter address" /></div>
+            <button type="submit" class="btn-primary-full">Save Customer</button>
+            <button type="button" onclick="closeModal('add-modal')" style="width:100%;padding:12px;background:transparent;border:1px solid var(--border);border-radius:var(--radius-md);cursor:pointer;font-size:var(--text-base);color:var(--text-secondary);margin-top:8px;">Cancel</button>
+        </form>
+    </div>
+</div>
+
+<!-- View Customer Modal -->
+<div class="modal-overlay" id="view-modal">
+    <div class="modal-box">
+        <div class="modal-header-title"><h2>Customer Details</h2></div>
+        <div class="modal-divider"></div>
+        <div id="view-content"></div>
+        <button class="btn-primary-full" onclick="closeModal('view-modal')">Close</button>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+let customers = [];
+let currentPage = 1;
+const itemsPerPage = 10;
+let globalSearchQuery = '';
+
+window.onGlobalSearch = function(query) {
+    globalSearchQuery = query.toLowerCase();
+    currentPage = 1; // Reset to first page when searching
+    renderTable();
+};
+
+async function loadCustomers() {
+    try {
+        customers = await apiFetch('/api/customers');
+        renderTable();
+        document.getElementById('cust-loading').style.display = 'none';
+        document.getElementById('cust-table').style.display = 'table';
+    } catch(e) {
+        document.getElementById('cust-loading').textContent = 'Failed to load customers.';
+    }
+}
+
+function renderTable() {
+    const filteredCustomers = customers.filter(c => {
+        const name = (c.customerName || c.name || '').toLowerCase();
+        const contact = (c.contactNo || c.contact || '').toLowerCase();
+        return name.includes(globalSearchQuery) || contact.includes(globalSearchQuery);
+    });
+
+    const totalPages = Math.ceil(filteredCustomers.length / itemsPerPage);
+    if (currentPage > totalPages && totalPages > 0) currentPage = totalPages;
+
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const currentItems = filteredCustomers.slice(start, end);
+
+    document.getElementById('cust-tbody').innerHTML = currentItems.map(c => `
+        <tr>
+            <td>${c.customerName || c.name}</td>
+            <td>${c.contactNo || c.contact}</td>
+            <td style="color:var(--text-secondary);font-size:14px;">${c.address || '-'}</td>
+            <td style="text-align:center;">
+                <button class="btn-view" onclick='viewCustomer(${JSON.stringify(c)})'>
+                    <i data-lucide="eye" style="width:18px;height:18px;"></i> View
+                </button>
+            </td>
+            <td style="text-align:center;">
+                <button class="btn-edit-icon" onclick='editCustomer(${JSON.stringify(c)})'>
+                    <i data-lucide="edit" style="width:18px;height:18px;"></i>
+                </button>
+            </td>
+            <td style="text-align:center;">
+                <button class="btn-delete" onclick="deleteCustomer('${c._id}')">
+                    <i data-lucide="trash-2" style="width:18px;height:18px;"></i>
+                </button>
+            </td>
+        </tr>`).join('');
+    
+    renderPagination(totalPages, start, end);
+    lucide.createIcons();
+}
+
+function renderPagination(totalPages, start, end) {
+    const controls = document.getElementById('pagination-controls');
+    if (totalPages <= 1) {
+        controls.style.display = 'none';
+        return;
+    }
+    
+    controls.style.display = 'flex';
+    document.getElementById('pagination-info').textContent = `Showing ${Math.min(start + 1, currentItems.length === 0 ? 0 : start + currentItems.length)} to ${end} of ${filteredCustomers?.length || customers.length} Entries`;
+    document.getElementById('pagination-pages').textContent = `${currentPage} / ${totalPages}`;
+    
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    
+    btnPrev.disabled = currentPage === 1;
+    btnPrev.style.backgroundColor = currentPage === 1 ? '#F3F4F6' : 'white';
+    btnPrev.style.color = currentPage === 1 ? '#9CA3AF' : 'var(--text-primary)';
+    btnPrev.style.cursor = currentPage === 1 ? 'not-allowed' : 'pointer';
+
+    btnNext.disabled = currentPage === totalPages;
+    btnNext.style.backgroundColor = currentPage === totalPages ? '#F3F4F6' : 'white';
+    btnNext.style.color = currentPage === totalPages ? '#9CA3AF' : 'var(--text-primary)';
+    btnNext.style.cursor = currentPage === totalPages ? 'not-allowed' : 'pointer';
+}
+
+function prevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        renderTable();
+    }
+}
+
+function nextPage() {
+    const totalPages = Math.ceil(customers.length / itemsPerPage);
+    if (currentPage < totalPages) {
+        currentPage++;
+        renderTable();
+    }
+}
+
+function openAddModal() {
+    document.getElementById('modal-main-title').textContent = 'Add Customer';
+    document.getElementById('modal-main-sub').textContent = 'Fill out the form below to add a new customer';
+    ['edit-id','f-name','f-contact','f-address'].forEach(id => document.getElementById(id).value = '');
+    openModal('add-modal');
+}
+
+function editCustomer(c) {
+    document.getElementById('modal-main-title').textContent = 'Edit Customer';
+    document.getElementById('modal-main-sub').textContent = 'Update the customer information below';
+    document.getElementById('edit-id').value = c._id;
+    document.getElementById('f-name').value = c.customerName || c.name || '';
+    document.getElementById('f-contact').value = c.contactNo || c.contact || '';
+    document.getElementById('f-address').value = c.address || '';
+    openModal('add-modal');
+}
+
+function viewCustomer(c) {
+    document.getElementById('view-content').innerHTML = `
+        <div style="display:flex;flex-direction:column;gap:16px;">
+            <div><p style="font-size:12px;font-weight:600;color:#6B7280;margin-bottom:4px;">Customer Name</p><p style="font-weight:600;font-size:16px;">${c.customerName||c.name}</p></div>
+            <div><p style="font-size:12px;font-weight:600;color:#6B7280;margin-bottom:4px;">Contact No</p><p>${c.contactNo||c.contact}</p></div>
+            <div><p style="font-size:12px;font-weight:600;color:#6B7280;margin-bottom:4px;">Address</p><p>${c.address||'—'}</p></div>
+            <div><p style="font-size:12px;font-weight:600;color:#6B7280;margin-bottom:4px;">Added On</p><p>${formatDate(c.createdAt)}</p></div>
+        </div>`;
+    openModal('view-modal');
+}
+
+async function saveCustomer() {
+    const id = document.getElementById('edit-id').value;
+    const body = {
+        customerName: document.getElementById('f-name').value.trim(),
+        contactNo: document.getElementById('f-contact').value.trim(),
+        address: document.getElementById('f-address').value.trim()
+    };
+    if (!body.customerName || !body.contactNo) return showToast('Name and Contact are required', 'error');
+    try {
+        if (id) await apiFetch(`/api/customers/${id}`, 'PUT', body);
+        else await apiFetch('/api/customers', 'POST', body);
+        closeModal('add-modal');
+        showToast(id ? 'Customer updated!' : 'Customer added!');
+        loadCustomers();
+    } catch(e) { showToast('Failed: ' + e.message, 'error'); }
+}
+
+async function deleteCustomer(id) {
+    if (!confirm('Delete this customer?')) return;
+    try {
+        await apiFetch(`/api/customers/${id}`, 'DELETE');
+        showToast('Deleted!');
+        loadCustomers();
+    } catch(e) { showToast('Delete failed', 'error'); }
+}
+
+function openModal(id) { document.getElementById(id).classList.add('show'); }
+function closeModal(id) { document.getElementById(id).classList.remove('show'); }
+
+loadCustomers();
+</script>
+}

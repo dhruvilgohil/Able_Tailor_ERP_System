@@ -1,0 +1,173 @@
+@{
+    ViewData["Title"] = "Tailors";
+}
+<div style="display:flex;flex-direction:column;gap:var(--spacing-2xl);">
+    <div class="action-bar"><button class="add-btn" onclick="openAdd()">Add Tailor</button></div>
+    <div class="table-wrapper">
+        <div id="tailor-loading" style="padding:32px;text-align:center;color:#9CA3AF;">Loading...</div>
+        <table class="data-table" id="tailor-table" style="display:none;">
+            <thead><tr>
+                <th>Name</th><th>Phone</th><th>Address</th>
+                <th>Payment Type</th><th>Rate (₹)</th>
+                <th style="text-align:center;">Edit</th>
+                <th style="text-align:center;">Delete</th>
+            </tr></thead>
+            <tbody id="tailor-tbody"></tbody>
+        </table>
+    </div>
+
+    <!-- Pagination Controls -->
+    <div id="pagination-controls" style="display:none; justify-content: space-between; align-items: center; padding: 16px; background-color: var(--surface); border: 1px solid var(--border); border-top: none; border-bottom-left-radius: var(--radius-lg); border-bottom-right-radius: var(--radius-lg);">
+        <span id="pagination-info" style="color: var(--text-secondary); font-size: 14px;"></span>
+        <div style="display: flex; gap: 8px;">
+            <button id="btn-prev" onclick="prevPage()" style="padding: 8px 12px; border: 1px solid var(--border); border-radius: var(--radius-md); background-color: white; cursor: pointer; color: var(--text-primary); display: flex; align-items: center; gap: 4px;">
+                <i data-lucide="chevron-left" style="width:16px;height:16px;"></i> Prev
+            </button>
+            <span id="pagination-pages" style="display: flex; align-items: center; padding: 0 12px; font-weight: 500; color: var(--text-primary);"></span>
+            <button id="btn-next" onclick="nextPage()" style="padding: 8px 12px; border: 1px solid var(--border); border-radius: var(--radius-md); background-color: white; cursor: pointer; color: var(--text-primary); display: flex; align-items: center; gap: 4px;">
+                Next <i data-lucide="chevron-right" style="width:16px;height:16px;"></i>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="modal-overlay" id="tailor-modal">
+    <div class="modal-box">
+        <div class="modal-header-title"><h2 id="tailor-modal-title">Add Tailor</h2><p id="tailor-modal-sub">Fill in tailor details below</p></div>
+        <div class="modal-divider"></div>
+        <form onsubmit="event.preventDefault(); saveTailor();">
+            <input type="hidden" id="t-edit-id" />
+            <div class="form-field"><label>Name *</label><input type="text" id="t-name" placeholder="Full name" required /></div>
+            <div class="form-row">
+                <div class="form-field"><label>Phone *</label><input type="text" id="t-phone" placeholder="Phone number" required /></div>
+                <div class="form-field"><label>Address</label><input type="text" id="t-address" placeholder="Address" /></div>
+            </div>
+            <div class="form-row">
+                <div class="form-field"><label>Payment Type</label><select id="t-type" onchange="handleType()"><option value="Salary">Salary Based</option><option value="Contract">Contract Based</option></select></div>
+                <div class="form-field"><label id="t-rate-label">Monthly Salary (₹)</label><input type="number" id="t-rate" placeholder="0" /></div>
+            </div>
+            <button type="submit" class="btn-primary-full">Save Tailor</button>
+            <button type="button" onclick="closeModal('tailor-modal')" style="width:100%;padding:12px;background:transparent;border:1px solid var(--border);border-radius:var(--radius-md);cursor:pointer;font-size:var(--text-base);color:var(--text-secondary);margin-top:8px;">Cancel</button>
+        </form>
+    </div>
+</div>
+@section Scripts {
+<script>
+let globalTailors = [];
+let currentPage = 1;
+const itemsPerPage = 10;
+let globalSearchQuery = '';
+
+window.onGlobalSearch = function(query) {
+    globalSearchQuery = query.toLowerCase();
+    currentPage = 1; // Reset to first page when searching
+    renderTable();
+};
+async function loadTailors() {
+    try {
+        globalTailors = await apiFetch('/api/tailors');
+        renderTable();
+        document.getElementById('tailor-loading').style.display='none';
+        document.getElementById('tailor-table').style.display='table';
+    } catch(e) { document.getElementById('tailor-loading').textContent='Failed.'; }
+}
+
+function renderTable() {
+    const filteredTailors = globalTailors.filter(t => {
+        const name = (t.name || '').toLowerCase();
+        const phone = (t.phone || '').toLowerCase();
+        return name.includes(globalSearchQuery) || phone.includes(globalSearchQuery);
+    });
+
+    const totalPages = Math.ceil(filteredTailors.length / itemsPerPage);
+    if (currentPage > totalPages && totalPages > 0) currentPage = totalPages;
+
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const currentItems = filteredTailors.slice(start, end);
+
+    document.getElementById('tailor-tbody').innerHTML = currentItems.map(t=>`<tr>
+            <td>${t.name}</td><td>${t.phone}</td>
+            <td style="color:var(--text-secondary);font-size:14px;">${t.address||'—'}</td>
+            <td><span style="padding:6px 16px;border-radius:20px;font-size:14px;font-weight:500;background:${t.paymentType==='Contract'?'#DBEAFE':'#D1FAE5'};color:${t.paymentType==='Contract'?'#1D4ED8':'#065F46'};">${t.paymentType||'Salary'}</span></td>
+            <td>₹ ${t.paymentType==='Contract'?t.contractRate||0:t.salary||0}</td>
+            <td style="text-align:center;"><button class="btn-edit-icon" onclick='editTailor(${JSON.stringify(t)})'><i data-lucide="edit" style="width:18px;height:18px;"></i></button></td>
+            <td style="text-align:center;"><button class="btn-delete" onclick="deleteTailor('${t._id}')"><i data-lucide="trash-2" style="width:18px;height:18px;"></i></button></td>
+        </tr>`).join('');
+    
+    renderPagination(totalPages, start, end);
+    lucide.createIcons();
+}
+
+function renderPagination(totalPages, start, end) {
+    const controls = document.getElementById('pagination-controls');
+    if (totalPages <= 1) {
+        controls.style.display = 'none';
+        return;
+    }
+    
+    controls.style.display = 'flex';
+    document.getElementById('pagination-info').textContent = `Showing ${Math.min(start + 1, currentItems.length === 0 ? 0 : start + currentItems.length)} to ${end} of ${filteredTailors?.length || globalTailors.length} Entries`;
+    document.getElementById('pagination-pages').textContent = `${currentPage} / ${totalPages}`;
+    
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    
+    btnPrev.disabled = currentPage === 1;
+    btnPrev.style.backgroundColor = currentPage === 1 ? '#F3F4F6' : 'white';
+    btnPrev.style.color = currentPage === 1 ? '#9CA3AF' : 'var(--text-primary)';
+    btnPrev.style.cursor = currentPage === 1 ? 'not-allowed' : 'pointer';
+
+    btnNext.disabled = currentPage === totalPages;
+    btnNext.style.backgroundColor = currentPage === totalPages ? '#F3F4F6' : 'white';
+    btnNext.style.color = currentPage === totalPages ? '#9CA3AF' : 'var(--text-primary)';
+    btnNext.style.cursor = currentPage === totalPages ? 'not-allowed' : 'pointer';
+}
+
+function prevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        renderTable();
+    }
+}
+
+function nextPage() {
+    const totalPages = Math.ceil(globalTailors.length / itemsPerPage);
+    if (currentPage < totalPages) {
+        currentPage++;
+        renderTable();
+    }
+}
+function openAdd() {
+    document.getElementById('tailor-modal-title').textContent='Add Tailor';
+    document.getElementById('tailor-modal-sub').textContent='Fill in tailor details below';
+    ['t-edit-id','t-name','t-phone','t-address','t-rate'].forEach(id=>document.getElementById(id).value='');
+    document.getElementById('t-type').value='Salary'; handleType(); openModal('tailor-modal');
+}
+function editTailor(t) {
+    document.getElementById('tailor-modal-title').textContent='Edit Tailor';
+    document.getElementById('tailor-modal-sub').textContent='Update tailor details below';
+    document.getElementById('t-edit-id').value=t._id;
+    document.getElementById('t-name').value=t.name;
+    document.getElementById('t-phone').value=t.phone;
+    document.getElementById('t-address').value=t.address||'';
+    document.getElementById('t-type').value=t.paymentType||'Salary';
+    document.getElementById('t-rate').value=t.paymentType==='Contract'?t.contractRate||'':t.salary||'';
+    handleType(); openModal('tailor-modal');
+}
+function handleType() {
+    const type=document.getElementById('t-type').value;
+    document.getElementById('t-rate-label').textContent=type==='Contract'?'Contract Rate (₹)':'Monthly Salary (₹)';
+}
+async function saveTailor() {
+    const id=document.getElementById('t-edit-id').value;
+    const type=document.getElementById('t-type').value;
+    const rate=parseFloat(document.getElementById('t-rate').value)||0;
+    const body={name:document.getElementById('t-name').value.trim(),phone:document.getElementById('t-phone').value.trim(),address:document.getElementById('t-address').value.trim(),paymentType:type,salary:type==='Salary'?rate:0,contractRate:type==='Contract'?rate:0};
+    if(!body.name||!body.phone)return showToast('Name and phone required','error');
+    try{if(id)await apiFetch(`/api/tailors/${id}`,'PUT',body);else await apiFetch('/api/tailors','POST',body);closeModal('tailor-modal');showToast(id?'Updated!':'Added!');loadTailors();}catch(e){showToast('Error: '+e.message,'error');}
+}
+async function deleteTailor(id){if(!confirm('Delete tailor?'))return;try{await apiFetch(`/api/tailors/${id}`,'DELETE');showToast('Deleted!');loadTailors();}catch(e){showToast('Failed','error');}}
+function openModal(id){document.getElementById(id).classList.add('show');}
+function closeModal(id){document.getElementById(id).classList.remove('show');}
+loadTailors();
+</script>}

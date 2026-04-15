@@ -1,0 +1,11 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\Program.cs(1,43): error CS0234: The type or namespace name 'JwtBearer' does not exist in the namespace 'Microsoft.AspNetCore.Authentication' (are you missing an assembly reference?) [D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\Tailor-Management-System.csproj]
+
+Build FAILED.
+
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\Program.cs(1,43): error CS0234: The type or namespace name 'JwtBearer' does not exist in the namespace 'Microsoft.AspNetCore.Authentication' (are you missing an assembly reference?) [D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\Tailor-Management-System.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:01.04

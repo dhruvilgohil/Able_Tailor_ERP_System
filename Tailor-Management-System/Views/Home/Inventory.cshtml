@@ -1,0 +1,177 @@
+@{
+    ViewData["Title"] = "Inventory";
+}
+<div style="display:flex;flex-direction:column;gap:var(--spacing-2xl);">
+    <div class="action-bar"><button class="add-btn" onclick="openAdd()">Add Item</button></div>
+    <div class="table-wrapper">
+        <div id="inv-loading" style="padding:32px;text-align:center;color:#9CA3AF;">Loading...</div>
+        <table class="data-table" id="inv-table" style="display:none;">
+            <thead>
+                <tr>
+                    <th>Item Name</th><th>Category</th><th>Quantity</th><th>Unit</th>
+                    <th>Price/Unit (₹)</th><th>Added On</th>
+                    <th style="text-align:center;">Edit</th><th style="text-align:center;">Delete</th>
+                </tr>
+            </thead>
+            <tbody id="inv-tbody"></tbody>
+        </table>
+        </table>
+    </div>
+
+    <!-- Pagination Controls -->
+    <div id="pagination-controls" style="display:none; justify-content: space-between; align-items: center; padding: 16px; background-color: var(--surface); border: 1px solid var(--border); border-top: none; border-bottom-left-radius: var(--radius-lg); border-bottom-right-radius: var(--radius-lg);">
+        <span id="pagination-info" style="color: var(--text-secondary); font-size: 14px;"></span>
+        <div style="display: flex; gap: 8px;">
+            <button id="btn-prev" onclick="prevPage()" style="padding: 8px 12px; border: 1px solid var(--border); border-radius: var(--radius-md); background-color: white; cursor: pointer; color: var(--text-primary); display: flex; align-items: center; gap: 4px;">
+                <i data-lucide="chevron-left" style="width:16px;height:16px;"></i> Prev
+            </button>
+            <span id="pagination-pages" style="display: flex; align-items: center; padding: 0 12px; font-weight: 500; color: var(--text-primary);"></span>
+            <button id="btn-next" onclick="nextPage()" style="padding: 8px 12px; border: 1px solid var(--border); border-radius: var(--radius-md); background-color: white; cursor: pointer; color: var(--text-primary); display: flex; align-items: center; gap: 4px;">
+                Next <i data-lucide="chevron-right" style="width:16px;height:16px;"></i>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="modal-overlay" id="inv-modal">
+    <div class="modal-box">
+        <div class="modal-header-title"><h2 id="inv-modal-title">Add Inventory Item</h2><p id="inv-modal-sub">Fill in item details</p></div>
+        <div class="modal-divider"></div>
+        <form onsubmit="event.preventDefault(); saveItem();">
+            <input type="hidden" id="inv-edit-id" />
+            <div class="form-field"><label>Item Name *</label><input type="text" id="inv-name" placeholder="e.g. Blue Linen Fabric" required /></div>
+            <div class="form-row">
+                <div class="form-field"><label>Category</label><input type="text" id="inv-category" placeholder="Fabric, Thread..." /></div>
+                <div class="form-field"><label>Quantity</label><input type="number" id="inv-qty" placeholder="0" /></div>
+            </div>
+            <div class="form-row">
+                <div class="form-field"><label>Unit</label><input type="text" id="inv-unit" placeholder="meters, pcs..." /></div>
+                <div class="form-field"><label>Price/Unit (₹)</label><input type="number" id="inv-price" placeholder="0" /></div>
+            </div>
+            <button type="submit" class="btn-primary-full">Save Item</button>
+            <button type="button" onclick="closeModal('inv-modal')" style="width:100%;padding:12px;background:transparent;border:1px solid var(--border);border-radius:var(--radius-md);cursor:pointer;font-size:var(--text-base);color:var(--text-secondary);margin-top:8px;">Cancel</button>
+        </form>
+    </div>
+</div>
+@section Scripts {
+<script>
+let globalItems = [];
+let currentPage = 1;
+const itemsPerPage = 10;
+let globalSearchQuery = '';
+
+window.onGlobalSearch = function(query) {
+    globalSearchQuery = query.toLowerCase();
+    currentPage = 1; // Reset to first page when searching
+    renderTable();
+};
+
+async function loadInventory() {
+    try {
+        globalItems = await apiFetch('/api/inventory');
+        renderTable();
+        document.getElementById('inv-loading').style.display = 'none';
+        document.getElementById('inv-table').style.display = 'table';
+    } catch(e) { document.getElementById('inv-loading').textContent = 'Failed to load.'; }
+}
+
+function renderTable() {
+    const filteredItems = globalItems.filter(i => {
+        const name = (i.itemName || '').toLowerCase();
+        const cat = (i.category || '').toLowerCase();
+        return name.includes(globalSearchQuery) || cat.includes(globalSearchQuery);
+    });
+
+    const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+    if (currentPage > totalPages && totalPages > 0) currentPage = totalPages;
+
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const currentItems = filteredItems.slice(start, end);
+
+    document.getElementById('inv-tbody').innerHTML = currentItems.map(it => `
+            <tr>
+                <td>${it.itemName}</td>
+                <td style="color:var(--text-secondary);font-size:14px;">${it.category||'—'}</td>
+                <td>${it.stockQty}</td>
+                <td style="color:var(--text-secondary);">${it.stockUnit||'-'}</td>
+                <td>₹ ${it.unitPrice||0}</td>
+                <td style="font-size:14px;color:var(--text-secondary);">${formatDate(it.createdAt)}</td>
+                <td style="text-align:center;"><button class="btn-edit-icon" onclick='editItem(${JSON.stringify(it)})'><i data-lucide="edit" style="width:18px;height:18px;"></i></button></td>
+                <td style="text-align:center;"><button class="btn-delete" onclick="deleteItem('${it._id}')"><i data-lucide="trash-2" style="width:18px;height:18px;"></i></button></td>
+            </tr>`).join('');
+    
+    renderPagination(totalPages, start, end);
+    lucide.createIcons();
+}
+
+function renderPagination(totalPages, start, end) {
+    const controls = document.getElementById('pagination-controls');
+    if (totalPages <= 1) {
+        controls.style.display = 'none';
+        return;
+    }
+    
+    controls.style.display = 'flex';
+    document.getElementById('pagination-info').textContent = `Showing ${Math.min(start + 1, currentItems.length === 0 ? 0 : start + currentItems.length)} to ${end} of ${filteredItems?.length || globalItems.length} Entries`;
+    document.getElementById('pagination-pages').textContent = `${currentPage} / ${totalPages}`;
+    
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    
+    btnPrev.disabled = currentPage === 1;
+    btnPrev.style.backgroundColor = currentPage === 1 ? '#F3F4F6' : 'white';
+    btnPrev.style.color = currentPage === 1 ? '#9CA3AF' : 'var(--text-primary)';
+    btnPrev.style.cursor = currentPage === 1 ? 'not-allowed' : 'pointer';
+
+    btnNext.disabled = currentPage === totalPages;
+    btnNext.style.backgroundColor = currentPage === totalPages ? '#F3F4F6' : 'white';
+    btnNext.style.color = currentPage === totalPages ? '#9CA3AF' : 'var(--text-primary)';
+    btnNext.style.cursor = currentPage === totalPages ? 'not-allowed' : 'pointer';
+}
+
+function prevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        renderTable();
+    }
+}
+
+function nextPage() {
+    const totalPages = Math.ceil(globalItems.length / itemsPerPage);
+    if (currentPage < totalPages) {
+        currentPage++;
+        renderTable();
+    }
+}
+
+function openAdd() {
+    document.getElementById('inv-modal-title').textContent = 'Add Inventory Item';
+    document.getElementById('inv-modal-sub').textContent = 'Fill in item details';
+    ['inv-edit-id','inv-name','inv-category','inv-qty','inv-unit','inv-price'].forEach(id => document.getElementById(id).value = '');
+    openModal('inv-modal');
+}
+function editItem(it) {
+    document.getElementById('inv-modal-title').textContent = 'Edit Inventory Item';
+    document.getElementById('inv-modal-sub').textContent = 'Update the item details below';
+    document.getElementById('inv-edit-id').value = it._id;
+    document.getElementById('inv-name').value = it.itemName;
+    document.getElementById('inv-category').value = it.category||'';
+    document.getElementById('inv-qty').value = it.stockQty || 0;
+    document.getElementById('inv-unit').value = it.stockUnit||'';
+    document.getElementById('inv-price').value = it.unitPrice||0;
+    openModal('inv-modal');
+}
+async function saveItem() {
+    const id = document.getElementById('inv-edit-id').value;
+    const body = { itemName: document.getElementById('inv-name').value.trim(), category: document.getElementById('inv-category').value.trim(), stockQty: parseInt(document.getElementById('inv-qty').value)||0, stockUnit: document.getElementById('inv-unit').value.trim(), unitPrice: parseFloat(document.getElementById('inv-price').value)||0 };
+    if (!body.itemName) return showToast('Item name is required','error');
+    try { if (id) await apiFetch(`/api/inventory/${id}`,'PUT',body); else await apiFetch('/api/inventory','POST',body); closeModal('inv-modal'); showToast(id?'Updated!':'Added!'); loadInventory(); } catch(e) { showToast('Error: '+e.message,'error'); }
+}
+async function deleteItem(id) {
+    if (!confirm('Delete this item?')) return;
+    try { await apiFetch(`/api/inventory/${id}`,'DELETE'); showToast('Deleted!'); loadInventory(); } catch(e) { showToast('Failed','error'); }
+}
+function openModal(id) { document.getElementById(id).classList.add('show'); }
+function closeModal(id) { document.getElementById(id).classList.remove('show'); }
+loadInventory();
+</script>}

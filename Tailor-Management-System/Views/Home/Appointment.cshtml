@@ -1,0 +1,228 @@
+@{
+    ViewData["Title"] = "Appointment";
+}
+<div style="display:flex;flex-direction:column;gap:var(--spacing-2xl);">
+    <div class="action-bar"><button class="add-btn" onclick="openAdd()">Add Measurement</button></div>
+    <div class="table-wrapper">
+        <div id="meas-loading" style="padding:32px;text-align:center;color:#9CA3AF;">Loading...</div>
+        <table class="data-table" id="meas-table" style="display:none;">
+            <thead>
+                <tr>
+                    <th>Customer</th><th>Title</th><th>Shirt (Chest/Length)</th>
+                    <th>Pant (Waist/Length)</th><th>Date</th>
+                    <th style="text-align:center;">View</th>
+                    <th style="text-align:center;">Edit</th>
+                    <th style="text-align:center;">Delete</th>
+                </tr>
+            </thead>
+            <tbody id="meas-tbody"></tbody>
+        </table>
+    </div>
+
+    <!-- Pagination Controls -->
+    <div id="pagination-controls" style="display:none; justify-content: space-between; align-items: center; padding: 16px; background-color: var(--surface); border: 1px solid var(--border); border-top: none; border-bottom-left-radius: var(--radius-lg); border-bottom-right-radius: var(--radius-lg);">
+        <span id="pagination-info" style="color: var(--text-secondary); font-size: 14px;"></span>
+        <div style="display: flex; gap: 8px;">
+            <button id="btn-prev" onclick="prevPage()" style="padding: 8px 12px; border: 1px solid var(--border); border-radius: var(--radius-md); background-color: white; cursor: pointer; color: var(--text-primary); display: flex; align-items: center; gap: 4px;">
+                <i data-lucide="chevron-left" style="width:16px;height:16px;"></i> Prev
+            </button>
+            <span id="pagination-pages" style="display: flex; align-items: center; padding: 0 12px; font-weight: 500; color: var(--text-primary);"></span>
+            <button id="btn-next" onclick="nextPage()" style="padding: 8px 12px; border: 1px solid var(--border); border-radius: var(--radius-md); background-color: white; cursor: pointer; color: var(--text-primary); display: flex; align-items: center; gap: 4px;">
+                Next <i data-lucide="chevron-right" style="width:16px;height:16px;"></i>
+            </button>
+        </div>
+    </div>
+</div>
+<!-- Measurement Modal -->
+<div class="modal-overlay" id="meas-modal">
+    <div class="modal-box" style="width:660px;">
+        <div class="modal-header-title"><h2 id="meas-modal-title">Add Measurement</h2><p id="meas-modal-sub">Enter measurements for the customer</p></div>
+        <div class="modal-divider"></div>
+        <form onsubmit="event.preventDefault(); saveMeasurement();">
+            <input type="hidden" id="meas-edit-id" />
+            <div class="form-row">
+                <div class="form-field"><label>Customer *</label><select id="m-customer" required></select></div>
+                <div class="form-field"><label>Title / Notes</label><input type="text" id="m-title" placeholder="e.g. Suit measurements" /></div>
+            </div>
+            <p style="font-weight:700;color:#4F46E5;margin:4px 0;font-size:15px;">👕 Shirt Measurements</p>
+            <div class="form-row">
+                <div class="form-field"><label>Chest</label><input type="number" id="m-s-chest" placeholder="0" /></div>
+                <div class="form-field"><label>Length</label><input type="number" id="m-s-length" placeholder="0" /></div>
+            </div>
+            <div class="form-row">
+                <div class="form-field"><label>Shoulder</label><input type="number" id="m-s-shoulder" placeholder="0" /></div>
+                <div class="form-field"><label>Sleeve</label><input type="number" id="m-s-sleeve" placeholder="0" /></div>
+            </div>
+            <p style="font-weight:700;color:#4F46E5;margin:4px 0;font-size:15px;">👖 Pant Measurements</p>
+            <div class="form-row">
+                <div class="form-field"><label>Waist</label><input type="number" id="m-p-waist" placeholder="0" /></div>
+                <div class="form-field"><label>Length</label><input type="number" id="m-p-length" placeholder="0" /></div>
+            </div>
+            <div class="form-row">
+                <div class="form-field"><label>Hip</label><input type="number" id="m-p-hip" placeholder="0" /></div>
+                <div class="form-field"><label>Knee</label><input type="number" id="m-p-knee" placeholder="0" /></div>
+            </div>
+            <div class="form-row">
+                <div class="form-field"><label>Bottom</label><input type="number" id="m-p-bottom" placeholder="0" /></div>
+                <div class="form-field"><label>Jhulo</label><input type="number" id="m-p-jhulo" placeholder="0" /></div>
+            </div>
+            <button type="submit" class="btn-primary-full">Save Measurement</button>
+            <button type="button" onclick="closeModal('meas-modal')" style="width:100%;padding:12px;background:transparent;border:1px solid var(--border);border-radius:var(--radius-md);cursor:pointer;font-size:var(--text-base);color:var(--text-secondary);margin-top:8px;">Cancel</button>
+        </form>
+    </div>
+</div>
+<!-- View Modal -->
+<div class="modal-overlay" id="view-meas-modal">
+    <div class="modal-box">
+        <div class="modal-header-title"><h2>Measurement Details</h2></div>
+        <div class="modal-divider"></div>
+        <div id="view-meas-content"></div>
+        <button class="btn-primary-full" onclick="closeModal('view-meas-modal')" style="margin-top:8px;">Close</button>
+    </div>
+</div>
+@section Scripts {
+<script>
+let globalMeas = [];
+let currentPage = 1;
+const itemsPerPage = 10;
+let globalSearchQuery = '';
+
+window.onGlobalSearch = function(query) {
+    globalSearchQuery = query.toLowerCase();
+    currentPage = 1; // Reset to first page when searching
+    renderTable();
+};
+
+async function loadMeasurements() {
+    try {
+        const [meas, custs] = await Promise.all([apiFetch('/api/measurements'), apiFetch('/api/customers')]);
+        globalMeas = meas;
+        document.getElementById('m-customer').innerHTML = '<option value="">Select Customer</option>' + custs.map(c=>`<option value="${c._id}">${c.customerName}</option>`).join('');
+        renderTable();
+        document.getElementById('meas-loading').style.display='none';
+        document.getElementById('meas-table').style.display='table';
+    } catch(e) { document.getElementById('meas-loading').textContent='Failed to load.'; }
+}
+
+function renderTable() {
+    const filteredMeas = globalMeas.filter(m => {
+        const custName = (m.customerId?.customerName || m.customerId?.name || '').toLowerCase();
+        const title = (m.title || m.type || '').toLowerCase();
+        return custName.includes(globalSearchQuery) || title.includes(globalSearchQuery);
+    });
+
+    const totalPages = Math.ceil(filteredMeas.length / itemsPerPage);
+    if (currentPage > totalPages && totalPages > 0) currentPage = totalPages;
+
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const currentItems = filteredMeas.slice(start, end);
+
+    document.getElementById('meas-tbody').innerHTML = currentItems.map(m=>`
+            <tr>
+                <td>${m.customerId?.customerName||'—'}</td>
+                <td style="color:var(--text-secondary);font-size:14px;">${m.title||'—'}</td>
+                <td>${m.shirt?.chest||'—'} / ${m.shirt?.length||'—'}</td>
+                <td>${m.pant?.waist||'—'} / ${m.pant?.length||'—'}</td>
+                <td style="font-size:14px;color:var(--text-secondary);">${formatDate(m.createdAt)}</td>
+                <td style="text-align:center;"><button class="btn-view" onclick='viewMeas(${JSON.stringify(m)})'><i data-lucide="eye" style="width:18px;height:18px;"></i> View</button></td>
+                <td style="text-align:center;"><button class="btn-edit-icon" onclick='editMeas(${JSON.stringify(m)})'><i data-lucide="edit" style="width:18px;height:18px;"></i></button></td>
+                <td style="text-align:center;"><button class="btn-delete" onclick="deleteMeas('${m._id}')"><i data-lucide="trash-2" style="width:18px;height:18px;"></i></button></td>
+            </tr>`).join('');
+    
+    renderPagination(totalPages, start, end);
+    lucide.createIcons();
+}
+
+function renderPagination(totalPages, start, end) {
+    const controls = document.getElementById('pagination-controls');
+    if (totalPages <= 1) {
+        controls.style.display = 'none';
+        return;
+    }
+    
+    controls.style.display = 'flex';
+    document.getElementById('pagination-info').textContent = `Showing ${Math.min(start + 1, currentItems.length === 0 ? 0 : start + currentItems.length)} to ${end} of ${filteredMeas?.length || globalMeas.length} Entries`;
+    document.getElementById('pagination-pages').textContent = `${currentPage} / ${totalPages}`;
+    
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    
+    btnPrev.disabled = currentPage === 1;
+    btnPrev.style.backgroundColor = currentPage === 1 ? '#F3F4F6' : 'white';
+    btnPrev.style.color = currentPage === 1 ? '#9CA3AF' : 'var(--text-primary)';
+    btnPrev.style.cursor = currentPage === 1 ? 'not-allowed' : 'pointer';
+
+    btnNext.disabled = currentPage === totalPages;
+    btnNext.style.backgroundColor = currentPage === totalPages ? '#F3F4F6' : 'white';
+    btnNext.style.color = currentPage === totalPages ? '#9CA3AF' : 'var(--text-primary)';
+    btnNext.style.cursor = currentPage === totalPages ? 'not-allowed' : 'pointer';
+}
+
+function prevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        renderTable();
+    }
+}
+
+function nextPage() {
+    const totalPages = Math.ceil(globalMeas.length / itemsPerPage);
+    if (currentPage < totalPages) {
+        currentPage++;
+        renderTable();
+    }
+}
+
+function openAdd() {
+    document.getElementById('meas-modal-title').textContent='Add Measurement';
+    document.getElementById('meas-modal-sub').textContent='Enter measurements for the customer';
+    ['meas-edit-id','m-title','m-s-chest','m-s-length','m-s-shoulder','m-s-sleeve','m-p-waist','m-p-length','m-p-hip','m-p-knee','m-p-bottom','m-p-jhulo'].forEach(id=>{const e=document.getElementById(id);if(e)e.value='';});
+    document.getElementById('m-customer').selectedIndex=0;
+    openModal('meas-modal');
+}
+function editMeas(m) {
+    document.getElementById('meas-modal-title').textContent='Edit Measurement';
+    document.getElementById('meas-modal-sub').textContent='Update measurement details below';
+    document.getElementById('meas-edit-id').value=m._id;
+    document.getElementById('m-customer').value=m.customerId?._id||m.customerId||'';
+    document.getElementById('m-title').value=m.title||'';
+    document.getElementById('m-s-chest').value=m.shirt?.chest||'';
+    document.getElementById('m-s-length').value=m.shirt?.length||'';
+    document.getElementById('m-s-shoulder').value=m.shirt?.shoulder||'';
+    document.getElementById('m-s-sleeve').value=m.shirt?.sleeve||'';
+    document.getElementById('m-p-waist').value=m.pant?.waist||'';
+    document.getElementById('m-p-length').value=m.pant?.length||'';
+    document.getElementById('m-p-hip').value=m.pant?.hip||'';
+    document.getElementById('m-p-knee').value=m.pant?.knee||'';
+    document.getElementById('m-p-bottom').value=m.pant?.bottom||'';
+    document.getElementById('m-p-jhulo').value=m.pant?.jhulo||'';
+    openModal('meas-modal');
+}
+function viewMeas(m) {
+    document.getElementById('view-meas-content').innerHTML=`
+        <div style="margin-bottom:8px;"><p style="font-size:12px;font-weight:600;color:#6B7280;margin-bottom:4px;">Customer</p><p style="font-weight:700;">${m.customerId?.customerName||'—'}</p></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div><p style="font-size:12px;font-weight:700;color:#4F46E5;margin-bottom:8px;">👕 SHIRT</p>
+                <p>Chest: ${m.shirt?.chest||'—'} | Length: ${m.shirt?.length||'—'}</p>
+                <p>Shoulder: ${m.shirt?.shoulder||'—'} | Sleeve: ${m.shirt?.sleeve||'—'}</p>
+            </div>
+            <div><p style="font-size:12px;font-weight:700;color:#4F46E5;margin-bottom:8px;">👖 PANT</p>
+                <p>Waist: ${m.pant?.waist||'—'} | Length: ${m.pant?.length||'—'}</p>
+                <p>Hip: ${m.pant?.hip||'—'} | Knee: ${m.pant?.knee||'—'}</p>
+                <p>Bottom: ${m.pant?.bottom||'—'} | Jhulo: ${m.pant?.jhulo||'—'}</p>
+            </div>
+        </div>`;
+    openModal('view-meas-modal');
+}
+async function saveMeasurement() {
+    const id=document.getElementById('meas-edit-id').value;
+    const body={customerId:document.getElementById('m-customer').value,title:document.getElementById('m-title').value.trim(),shirt:{chest:parseFloat(document.getElementById('m-s-chest').value)||null,length:parseFloat(document.getElementById('m-s-length').value)||null,shoulder:parseFloat(document.getElementById('m-s-shoulder').value)||null,sleeve:parseFloat(document.getElementById('m-s-sleeve').value)||null},pant:{waist:parseFloat(document.getElementById('m-p-waist').value)||null,length:parseFloat(document.getElementById('m-p-length').value)||null,hip:parseFloat(document.getElementById('m-p-hip').value)||null,knee:parseFloat(document.getElementById('m-p-knee').value)||null,bottom:parseFloat(document.getElementById('m-p-bottom').value)||null,jhulo:parseFloat(document.getElementById('m-p-jhulo').value)||null}};
+    if(!body.customerId)return showToast('Customer required','error');
+    try{if(id)await apiFetch(`/api/measurements/${id}`,'PUT',body);else await apiFetch('/api/measurements','POST',body);closeModal('meas-modal');showToast(id?'Updated!':'Added!');loadMeasurements();}catch(e){showToast('Error: '+e.message,'error');}
+}
+async function deleteMeas(id){if(!confirm('Delete?'))return;try{await apiFetch(`/api/measurements/${id}`,'DELETE');showToast('Deleted!');loadMeasurements();}catch(e){showToast('Failed','error');}}
+function openModal(id){document.getElementById(id).classList.add('show');}
+function closeModal(id){document.getElementById(id).classList.remove('show');}
+loadMeasurements();
+</script>}

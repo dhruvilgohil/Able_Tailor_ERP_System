@@ -1,0 +1,128 @@
+@{
+    ViewData["Title"] = "Income";
+}
+<div style="display:flex;flex-direction:column;gap:var(--spacing-2xl);">
+    <!-- Summary Cards -->
+    <div class="stats-grid" style="grid-template-columns:repeat(3,1fr);">
+        <div class="stat-card"><div><p class="stat-label">Total Income</p><h3 class="stat-value" id="inc-total">—</h3></div><div style="color:var(--primary);opacity:.8;"><i data-lucide="wallet" style="width:28px;height:28px;"></i></div></div>
+        <div class="stat-card"><div><p class="stat-label">This Month</p><h3 class="stat-value" id="inc-month">—</h3></div><div style="color:var(--primary);opacity:.8;"><i data-lucide="calendar" style="width:28px;height:28px;"></i></div></div>
+        <div class="stat-card"><div><p class="stat-label">Transactions</p><h3 class="stat-value" id="inc-count">—</h3></div><div style="color:var(--primary);opacity:.8;"><i data-lucide="receipt" style="width:28px;height:28px;"></i></div></div>
+    </div>
+    <!-- Table -->
+    <div class="table-wrapper">
+        <div id="inc-loading" style="padding:32px;text-align:center;color:#9CA3AF;">Loading...</div>
+        <table class="data-table" id="inc-table" style="display:none;">
+            <thead><tr><th>#</th><th>Customer</th><th>Source</th><th>Amount (₹)</th><th>Date</th></tr></thead>
+            <tbody id="inc-tbody"></tbody>
+        </table>
+    </div>
+
+    <!-- Pagination Controls -->
+    <div id="pagination-controls" style="display:none; justify-content: space-between; align-items: center; padding: 16px; background-color: var(--surface); border: 1px solid var(--border); border-top: none; border-bottom-left-radius: var(--radius-lg); border-bottom-right-radius: var(--radius-lg);">
+        <span id="pagination-info" style="color: var(--text-secondary); font-size: 14px;"></span>
+        <div style="display: flex; gap: 8px;">
+            <button id="btn-prev" onclick="prevPage()" style="padding: 8px 12px; border: 1px solid var(--border); border-radius: var(--radius-md); background-color: white; cursor: pointer; color: var(--text-primary); display: flex; align-items: center; gap: 4px;">
+                <i data-lucide="chevron-left" style="width:16px;height:16px;"></i> Prev
+            </button>
+            <span id="pagination-pages" style="display: flex; align-items: center; padding: 0 12px; font-weight: 500; color: var(--text-primary);"></span>
+            <button id="btn-next" onclick="nextPage()" style="padding: 8px 12px; border: 1px solid var(--border); border-radius: var(--radius-md); background-color: white; cursor: pointer; color: var(--text-primary); display: flex; align-items: center; gap: 4px;">
+                Next <i data-lucide="chevron-right" style="width:16px;height:16px;"></i>
+            </button>
+        </div>
+    </div>
+</div>
+@section Scripts {
+<script>
+let globalIncome = [];
+let currentPage = 1;
+const itemsPerPage = 10;
+let globalSearchQuery = '';
+
+window.onGlobalSearch = function(query) {
+    globalSearchQuery = query.toLowerCase();
+    currentPage = 1; // Reset to first page when searching
+    renderTable();
+};
+
+async function loadIncome() {
+    try {
+        const inc = await apiFetch('/api/income');
+        globalIncome = inc;
+        const total = inc.reduce((s,i) => s+Number(i.amount||0), 0);
+        const now = new Date();
+        const month = inc.filter(i => { const d=new Date(i.date||i.createdAt); return d.getMonth()===now.getMonth()&&d.getFullYear()===now.getFullYear(); }).reduce((s,i)=>s+Number(i.amount||0),0);
+        document.getElementById('inc-total').textContent = '₹ '+total.toLocaleString();
+        document.getElementById('inc-month').textContent = '₹ '+month.toLocaleString();
+        document.getElementById('inc-count').textContent = inc.length;
+        
+        renderTable();
+
+        document.getElementById('inc-loading').style.display = 'none';
+        document.getElementById('inc-table').style.display = 'table';
+    } catch(e) { document.getElementById('inc-loading').textContent = 'Failed to load.'; }
+}
+
+function renderTable() {
+    const filteredIncome = globalIncome.filter(i => {
+        const custName = (i.customerId?.customerName || i.customerName || '').toLowerCase();
+        return custName.includes(globalSearchQuery);
+    });
+
+    const totalPages = Math.ceil(filteredIncome.length / itemsPerPage);
+    if (currentPage > totalPages && totalPages > 0) currentPage = totalPages;
+
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const currentItems = filteredIncome.slice(start, end);
+
+    document.getElementById('inc-tbody').innerHTML = currentItems.map((i,idx)=>`
+            <tr><td>${start + idx + 1}</td><td>${i.customerId?.customerName||i.customerName||'—'}</td>
+            <td style="color:var(--text-secondary);font-size:14px;">${i.source||'Order'}</td>
+            <td style="font-weight:700;color:#059669;">₹ ${Number(i.amount||0).toLocaleString()}</td>
+            <td style="font-size:14px;color:var(--text-secondary);">${formatDate(i.date||i.createdAt)}</td></tr>`).join('');
+    
+    renderPagination(totalPages, start, end);
+    lucide.createIcons();
+}
+
+function renderPagination(totalPages, start, end) {
+    const controls = document.getElementById('pagination-controls');
+    if (totalPages <= 1) {
+        controls.style.display = 'none';
+        return;
+    }
+    
+    controls.style.display = 'flex';
+    document.getElementById('pagination-info').textContent = `Showing ${Math.min(start + 1, currentItems.length === 0 ? 0 : start + currentItems.length)} to ${end} of ${filteredIncome?.length || globalIncome.length} Entries`;
+    document.getElementById('pagination-pages').textContent = `${currentPage} / ${totalPages}`;
+    
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    
+    btnPrev.disabled = currentPage === 1;
+    btnPrev.style.backgroundColor = currentPage === 1 ? '#F3F4F6' : 'white';
+    btnPrev.style.color = currentPage === 1 ? '#9CA3AF' : 'var(--text-primary)';
+    btnPrev.style.cursor = currentPage === 1 ? 'not-allowed' : 'pointer';
+
+    btnNext.disabled = currentPage === totalPages;
+    btnNext.style.backgroundColor = currentPage === totalPages ? '#F3F4F6' : 'white';
+    btnNext.style.color = currentPage === totalPages ? '#9CA3AF' : 'var(--text-primary)';
+    btnNext.style.cursor = currentPage === totalPages ? 'not-allowed' : 'pointer';
+}
+
+function prevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        renderTable();
+    }
+}
+
+function nextPage() {
+    const totalPages = Math.ceil(globalIncome.length / itemsPerPage);
+    if (currentPage < totalPages) {
+        currentPage++;
+        renderTable();
+    }
+}
+loadIncome();
+</script>}

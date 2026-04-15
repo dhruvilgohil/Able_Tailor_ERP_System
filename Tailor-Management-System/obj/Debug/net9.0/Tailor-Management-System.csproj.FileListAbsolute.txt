@@ -1,0 +1,524 @@
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\appsettings.Development.json
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\appsettings.json
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.staticwebassets.runtime.json
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.staticwebassets.endpoints.json
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.exe
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.deps.json
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.runtimeconfig.json
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.dll
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.pdb
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\rpswa.dswa.cache.json
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.GeneratedMSBuildEditorConfig.editorconfig
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.AssemblyInfoInputs.cache
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.AssemblyInfo.cs
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.csproj.CoreCompileInputs.cache
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.MvcApplicationPartsAssemblyInfo.cache
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.RazorAssemblyInfo.cache
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.RazorAssemblyInfo.cs
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\rjimswa.dswa.cache.json
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\scopedcss\bundle\Tailor-Management-System.styles.css
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\scopedcss\projectbundle\Tailor-Management-System.bundle.scp.css
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\nw1z86l900-61n19gt1b8.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\ni9kuldjt5-bqjiyaj88i.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\fso2o0p6zx-c2jlpeoesf.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\nlm1b2x29x-erw9l3u2r3.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\rnydpiur2a-aexeepp0ev.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\yc1tbtqwlr-d7shbmvgxk.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\zay7wgw1if-ausgxo2sd3.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\7pq1ok6fv4-k8d9w2qqmf.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\vezw08h6i3-cosvhxvwiu.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\3rjmkvsnu2-ub07r2b239.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\n9e1l2uqoy-fvhpjtyr6v.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\di3qcw605g-b7pk76d08c.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\ae9l98jy8l-fsbi9cje9m.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\uorifac5xz-rzd6atqjts.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\ehk582jpgx-ee0r1s7dh0.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\n1lha23num-dxx9fxp4il.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\tprvlirzwu-jd9uben2k1.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\9r6p0fywti-khv3u5hwcm.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\hdwjsuvek4-r4e9w2rdcm.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\mep7h4c45y-lcd1t2u6c8.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\wl0w8b18qd-c2oey78nd0.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\nxtwkr6vqc-tdbxkamptv.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\jjaljmvesc-j5mq2jizvt.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\zk65eng03t-06098lyss8.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\snpzi3wg97-nvvlpmu67g.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\0vomrp8pnk-s35ty4nyc5.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\txfjfaio33-pj5nd1wqec.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\scf6tkql1c-46ein0sx1k.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\sq6gtfplo6-v0zj4ognzu.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\nutnf9apl0-37tfw0ft22.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\6xh2l54tvz-hrwsygsryq.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\7lpf1tkuzx-pk9g2wxc8p.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\ulxxfvjwrj-ft3s53vfgj.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\weapweqvbc-6cfz1n2cew.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\ccvfad2xjb-6pdc2jztkx.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\75zfkioz47-493y06b0oq.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\q237k5wmrw-iovd86k7lj.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\5k4xa726ou-vr1egmr9el.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\pn5te5s07c-kbrnm935zg.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\uhj1hi9a2j-jj8uyg4cgr.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\ewvp71t6io-y7v9cxd14o.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\d4o3g5vmq6-notf2xhcfb.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\1n1by3nurt-h1s4sie4z3.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\0r9ycdriyo-63fj8s7r0e.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\yk72ti58r6-0j3bgjxly4.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\0q4oqkn018-47otxtyo56.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\iq8hzbsca9-4v8eqarkd7.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\6sgu35t2dq-356vix0kms.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\e59dgboh4p-83jwlth58m.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\yvjjbjinzp-mrlpezrjn3.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\xqhk0h4rnd-lzl9nlhx6b.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\85nbqnoe6v-ag7o75518u.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\3lhvddtqtc-x0q3zqp4vz.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\nb0wovffxj-0i3buxo5is.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\72hp8gzb6o-o1o13a6vjx.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\gap89q5mhb-ttgo8qnofa.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\40p2lw6jnl-2z0ns9nrw6.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\ap01baaou1-muycvpuwrr.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\fc3wvvqui2-87fc7y1x7t.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\nk83h80dcr-mlv21k5csn.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\h8oqv8p2u4-k11vfchtgq.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\lkzcewgp2i-k11vfchtgq.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\staticwebassets.build.json
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\staticwebassets.build.json.cache
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\staticwebassets.development.json
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.dll
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\refint\Tailor-Management-System.dll
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.pdb
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.genruntimeconfig.cache
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\ref\Tailor-Management-System.dll
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\js5f2woo4h-alep67viyo.gz
+F:\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\xsnn8f03b5-iu5gu02l06.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\appsettings.json
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.staticwebassets.runtime.json
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.staticwebassets.endpoints.json
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.exe
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.deps.json
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.runtimeconfig.json
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.dll
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.pdb
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.AssemblyInfoInputs.cache
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.AssemblyInfo.cs
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.csproj.CoreCompileInputs.cache
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.RazorAssemblyInfo.cache
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.RazorAssemblyInfo.cs
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\scopedcss\bundle\Tailor-Management-System.styles.css
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\scopedcss\projectbundle\Tailor-Management-System.bundle.scp.css
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\xsnn8f03b5-iu5gu02l06.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\nw1z86l900-61n19gt1b8.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\js5f2woo4h-alep67viyo.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\ni9kuldjt5-bqjiyaj88i.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\fso2o0p6zx-c2jlpeoesf.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\nlm1b2x29x-erw9l3u2r3.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\rnydpiur2a-aexeepp0ev.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\yc1tbtqwlr-d7shbmvgxk.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\zay7wgw1if-ausgxo2sd3.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\7pq1ok6fv4-k8d9w2qqmf.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\vezw08h6i3-cosvhxvwiu.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\3rjmkvsnu2-ub07r2b239.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\n9e1l2uqoy-fvhpjtyr6v.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\di3qcw605g-b7pk76d08c.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\ae9l98jy8l-fsbi9cje9m.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\uorifac5xz-rzd6atqjts.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\ehk582jpgx-ee0r1s7dh0.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\n1lha23num-dxx9fxp4il.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\tprvlirzwu-jd9uben2k1.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\9r6p0fywti-khv3u5hwcm.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\hdwjsuvek4-r4e9w2rdcm.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\mep7h4c45y-lcd1t2u6c8.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\wl0w8b18qd-c2oey78nd0.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\nxtwkr6vqc-tdbxkamptv.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\jjaljmvesc-j5mq2jizvt.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\zk65eng03t-06098lyss8.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\snpzi3wg97-nvvlpmu67g.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\0vomrp8pnk-s35ty4nyc5.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\txfjfaio33-pj5nd1wqec.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\scf6tkql1c-46ein0sx1k.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\sq6gtfplo6-v0zj4ognzu.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\nutnf9apl0-37tfw0ft22.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\6xh2l54tvz-hrwsygsryq.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\7lpf1tkuzx-pk9g2wxc8p.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\ulxxfvjwrj-ft3s53vfgj.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\weapweqvbc-6cfz1n2cew.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\ccvfad2xjb-6pdc2jztkx.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\75zfkioz47-493y06b0oq.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\q237k5wmrw-iovd86k7lj.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\5k4xa726ou-vr1egmr9el.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\pn5te5s07c-kbrnm935zg.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\uhj1hi9a2j-jj8uyg4cgr.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\ewvp71t6io-y7v9cxd14o.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\d4o3g5vmq6-notf2xhcfb.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\1n1by3nurt-h1s4sie4z3.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\0r9ycdriyo-63fj8s7r0e.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\yk72ti58r6-0j3bgjxly4.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\0q4oqkn018-47otxtyo56.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\iq8hzbsca9-4v8eqarkd7.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\6sgu35t2dq-356vix0kms.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\e59dgboh4p-83jwlth58m.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\yvjjbjinzp-mrlpezrjn3.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\xqhk0h4rnd-lzl9nlhx6b.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\85nbqnoe6v-ag7o75518u.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\3lhvddtqtc-x0q3zqp4vz.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\nb0wovffxj-0i3buxo5is.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\72hp8gzb6o-o1o13a6vjx.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\gap89q5mhb-ttgo8qnofa.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\40p2lw6jnl-2z0ns9nrw6.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\ap01baaou1-muycvpuwrr.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\fc3wvvqui2-87fc7y1x7t.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\nk83h80dcr-mlv21k5csn.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\h8oqv8p2u4-k11vfchtgq.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\lkzcewgp2i-k11vfchtgq.gz
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.dll
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\refint\Tailor-Management-System.dll
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.pdb
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.genruntimeconfig.cache
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\ref\Tailor-Management-System.dll
+C:\Users\HP\OneDrive\Desktop\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\client_secret_232033818874-73cd6lipqkgl0efnh6a4hc7s9q5sptd0.apps.googleusercontent.com.json
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\appsettings.Development.json
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\appsettings.json
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\client_secret_232033818874-73cd6lipqkgl0efnh6a4hc7s9q5sptd0.apps.googleusercontent.com.json
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.staticwebassets.runtime.json
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.staticwebassets.endpoints.json
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.exe
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.deps.json
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.runtimeconfig.json
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.pdb
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\rpswa.dswa.cache.json
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.GeneratedMSBuildEditorConfig.editorconfig
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.AssemblyInfoInputs.cache
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.AssemblyInfo.cs
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.csproj.CoreCompileInputs.cache
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.MvcApplicationPartsAssemblyInfo.cache
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.RazorAssemblyInfo.cache
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.RazorAssemblyInfo.cs
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\rjimswa.dswa.cache.json
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\scopedcss\bundle\Tailor-Management-System.styles.css
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\scopedcss\projectbundle\Tailor-Management-System.bundle.scp.css
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\h8oqv8p2u4-k11vfchtgq.gz
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\lkzcewgp2i-k11vfchtgq.gz
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\staticwebassets.build.json
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\staticwebassets.build.json.cache
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\staticwebassets.development.json
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\refint\Tailor-Management-System.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.pdb
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.genruntimeconfig.cache
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\ref\Tailor-Management-System.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.csproj.AssemblyReference.cache
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\BCrypt.Net-Next.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Humanizer.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.Bcl.TimeProvider.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.Build.Locator.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.CodeAnalysis.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Mono.TextTemplating.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\System.CodeDom.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\System.Composition.AttributedModel.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\System.Composition.Convention.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\System.Composition.Hosting.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\System.Composition.Runtime.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\System.Composition.TypedParts.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-M.CCF47370.Up2Date
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.Data.Sqlite.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Sqlite.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\SQLitePCLRaw.batteries_v2.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\SQLitePCLRaw.core.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\SQLitePCLRaw.provider.e_sqlite3.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\browser-wasm\nativeassets\net9.0\e_sqlite3.a
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-arm\native\libe_sqlite3.so
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-arm64\native\libe_sqlite3.so
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-armel\native\libe_sqlite3.so
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-mips64\native\libe_sqlite3.so
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-musl-s390x\native\libe_sqlite3.so
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-s390x\native\libe_sqlite3.so
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-x64\native\libe_sqlite3.so
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-x86\native\libe_sqlite3.so
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\win-arm\native\e_sqlite3.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\win-arm64\native\e_sqlite3.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\win-x64\native\e_sqlite3.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\win-x86\native\e_sqlite3.dll
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\wdg7lrr5iu-v9d4jpo8ew.gz
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\qmt9487qnx-69kjnsiwqx.gz
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\output.json
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\u67vg18vv2-tjqi7oaz1x.gz
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\22a13q14rz-xq73owf69y.gz
+D:\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\appsettings.Development.json
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\appsettings.json
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\client_secret_232033818874-73cd6lipqkgl0efnh6a4hc7s9q5sptd0.apps.googleusercontent.com.json
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\output.json
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.staticwebassets.runtime.json
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.staticwebassets.endpoints.json
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.exe
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.deps.json
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.runtimeconfig.json
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Tailor-Management-System.pdb
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\BCrypt.Net-Next.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Humanizer.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.Bcl.TimeProvider.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.Build.Locator.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.CodeAnalysis.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.Data.Sqlite.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Sqlite.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\Mono.TextTemplating.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\SQLitePCLRaw.batteries_v2.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\SQLitePCLRaw.core.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\SQLitePCLRaw.provider.e_sqlite3.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\System.CodeDom.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\System.Composition.AttributedModel.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\System.Composition.Convention.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\System.Composition.Hosting.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\System.Composition.Runtime.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\System.Composition.TypedParts.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\browser-wasm\nativeassets\net9.0\e_sqlite3.a
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-arm\native\libe_sqlite3.so
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-arm64\native\libe_sqlite3.so
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-armel\native\libe_sqlite3.so
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-mips64\native\libe_sqlite3.so
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-musl-s390x\native\libe_sqlite3.so
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-s390x\native\libe_sqlite3.so
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-x64\native\libe_sqlite3.so
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\linux-x86\native\libe_sqlite3.so
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\win-arm\native\e_sqlite3.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\win-arm64\native\e_sqlite3.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\win-x64\native\e_sqlite3.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\bin\Debug\net9.0\runtimes\win-x86\native\e_sqlite3.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.csproj.AssemblyReference.cache
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\rpswa.dswa.cache.json
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.GeneratedMSBuildEditorConfig.editorconfig
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.AssemblyInfoInputs.cache
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.AssemblyInfo.cs
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.csproj.CoreCompileInputs.cache
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.MvcApplicationPartsAssemblyInfo.cache
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.RazorAssemblyInfo.cache
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.RazorAssemblyInfo.cs
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\rjimswa.dswa.cache.json
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\scopedcss\bundle\Tailor-Management-System.styles.css
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\scopedcss\projectbundle\Tailor-Management-System.bundle.scp.css
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\wdg7lrr5iu-v9d4jpo8ew.gz
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\u67vg18vv2-tjqi7oaz1x.gz
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\22a13q14rz-xq73owf69y.gz
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\qmt9487qnx-69kjnsiwqx.gz
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\h8oqv8p2u4-k11vfchtgq.gz
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\lkzcewgp2i-k11vfchtgq.gz
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\staticwebassets.build.json
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\staticwebassets.build.json.cache
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\staticwebassets.development.json
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-M.CCF47370.Up2Date
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\refint\Tailor-Management-System.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.pdb
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.genruntimeconfig.cache
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\ref\Tailor-Management-System.dll
+D:\tailor-erp (2)\tailor-erp\sem-6 viraj project\Tailor-Management-System\Tailor-Management-System\obj\Debug\net9.0\compressed\js5f2woo4h-gi0or937pz.gz

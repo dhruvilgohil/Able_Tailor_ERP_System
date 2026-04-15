@@ -1,0 +1,209 @@
+@{
+    Layout = null;
+    ViewData["Title"] = "Login";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Tailor Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', system-ui, sans-serif; min-height: 100vh; display: flex; background: #F4F4F5; }
+
+        /* Left pane — React uses #6366F1 */
+        .auth-left {
+            flex: 1;
+            background-color: #6366F1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 48px;
+        }
+        .auth-left h1 {
+            color: white;
+            font-size: 48px;
+            font-weight: 600;
+            margin: 0;
+            text-align: center;
+        }
+
+        /* Right pane — React uses --surface (white) */
+        .auth-right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #FFFFFF;
+        }
+        .auth-card {
+            width: 100%;
+            max-width: 480px;
+            background-color: #F4F4F5;
+            padding: 48px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -1px rgba(0,0,0,0.06);
+        }
+
+        .auth-title-block { text-align: center; margin-bottom: 32px; }
+        .auth-title { font-size: 24px; font-weight: 600; color: #111827; margin-bottom: 4px; }
+        .auth-subtitle { color: #6B7280; font-size: 18px; }
+
+        .form-group { display: flex; flex-direction: column; gap: 24px; }
+        .form-field { display: flex; flex-direction: column; gap: 8px; }
+        .form-field label { font-size: 16px; font-weight: 500; color: #111827; }
+        .form-field input {
+            padding: 16px;
+            border: 1px solid #E5E7EB;
+            border-radius: 6px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 150ms ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .form-field input:focus { border-color: #6366F1; }
+
+        .login-btn {
+            margin-top: 16px;
+            width: 100%;
+            padding: 16px;
+            background: #818CF8;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 150ms ease;
+        }
+        .login-btn:hover { background: #6366F1; }
+
+        .divider {
+            display: flex; align-items: center;
+            margin: 16px 0;
+        }
+        .divider-line { flex: 1; height: 1px; background: #E5E7EB; }
+        .divider-text { margin: 0 10px; color: #6B7280; font-size: 14px; font-weight: 500; }
+
+        .google-btn {
+            width: 100%; padding: 16px;
+            background: white; color: #374151;
+            border: 1px solid #E5E7EB;
+            border-radius: 6px;
+            font-size: 16px; font-weight: 500;
+            cursor: pointer;
+            display: flex; align-items: center;
+            justify-content: center; gap: 10px;
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 24px;
+            color: #6B7280;
+            font-size: 16px;
+        }
+        .register-link a { color: #4F46E5; font-weight: 500; text-decoration: none; }
+
+        .error-box {
+            padding: 16px;
+            background: #FEE2E2;
+            color: #B91C1C;
+            border-radius: 6px;
+            margin-bottom: 24px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        @@media (max-width: 768px) {
+            .auth-left { display: none; }
+            .auth-right { flex: none; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-left">
+        <h1>Tailor Management</h1>
+    </div>
+    <div class="auth-right">
+        <div class="auth-card">
+            <div class="auth-title-block">
+                <h2 class="auth-title">Welcome Back</h2>
+                <p class="auth-subtitle">login your account</p>
+            </div>
+
+            @if (ViewBag.Error != null)
+            {
+                <div class="error-box">@ViewBag.Error</div>
+            }
+
+            <form method="post" action="/Auth/Login">
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    <div class="form-field">
+                        <label>Email :</label>
+                        <input type="email" name="email" placeholder="Enter Email" required />
+                    </div>
+                    <div class="form-field">
+                        <label>Password :</label>
+                        <input type="password" name="password" placeholder="Enter Password" required />
+                    </div>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+
+            <div class="divider">
+                <div class="divider-line"></div>
+                <span class="divider-text">OR</span>
+                <div class="divider-line"></div>
+            </div>
+
+            <div style="display: flex; justify-content: center;">
+                <div id="g_id_onload"
+                     data-client_id="232033818874-qp3n4be18p3oba9ogbv98n265omn649b.apps.googleusercontent.com"
+                     data-context="signin"
+                     data-ux_mode="popup"
+                     data-callback="handleGoogleLogin"
+                     data-auto_prompt="false">
+                </div>
+                <div class="g_id_signin"
+                     data-type="standard"
+                     data-shape="rectangular"
+                     data-theme="outline"
+                     data-text="signin_with"
+                     data-size="large"
+                     data-logo_alignment="left">
+                </div>
+            </div>
+
+            <p class="register-link">
+                Don't have an account? <a href="/Auth/Register">Register here</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        async function handleGoogleLogin(response) {
+            try {
+                const res = await fetch('/Auth/GoogleLogin', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ token: response.credential })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    window.location.href = '/Home/Index';
+                } else {
+                    alert('Google Sign-In failed: ' + (data.message || 'Unknown error'));
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Failed to connect to server.');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tailor-Management-System")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b65584b55bad5bab79d2526312b95c2b41189e4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bfed62b8a3fdcf6bf36c17e3c309e5e68631f716")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tailor-Management-System")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tailor-Management-System")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

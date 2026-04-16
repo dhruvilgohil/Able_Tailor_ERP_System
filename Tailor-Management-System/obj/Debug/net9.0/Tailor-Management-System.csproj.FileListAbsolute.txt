@@ -673,7 +673,6 @@ D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_
 D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\obj\Debug\net9.0\scopedcss\projectbundle\Tailor-Management-System.bundle.scp.css
 D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\obj\Debug\net9.0\compressed\wdg7lrr5iu-v9d4jpo8ew.gz
 D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\obj\Debug\net9.0\compressed\u67vg18vv2-tjqi7oaz1x.gz
-D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\obj\Debug\net9.0\compressed\js5f2woo4h-gi0or937pz.gz
 D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\obj\Debug\net9.0\compressed\qmt9487qnx-69kjnsiwqx.gz
 D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\obj\Debug\net9.0\compressed\h8oqv8p2u4-k11vfchtgq.gz
 D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\obj\Debug\net9.0\compressed\lkzcewgp2i-k11vfchtgq.gz
@@ -689,3 +688,4 @@ D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_
 D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\obj\Debug\net9.0\ref\Tailor-Management-System.dll
 D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\obj\Debug\net9.0\compressed\xsnn8f03b5-eqeld5gq40.gz
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\obj\Debug\net9.0\compressed\js5f2woo4h-ai5dhhlo10.gz

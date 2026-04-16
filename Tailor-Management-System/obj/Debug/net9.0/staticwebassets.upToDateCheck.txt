@@ -2,10 +2,10 @@ wwwroot\assets\index-BHgEi89n.css
 wwwroot\assets\index-DhqI8ZcJ.js
 wwwroot\css\site.css
 wwwroot\index.html.bak
-wwwroot\js\site.js
 wwwroot\vite.svg
-D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\wwwroot\vite.svg
+wwwroot\js\site.js
 D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\wwwroot\assets\index-BHgEi89n.css
 D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\wwwroot\assets\index-DhqI8ZcJ.js
-D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\wwwroot\js\site.js
 D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\wwwroot\css\site.css
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\wwwroot\vite.svg
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\wwwroot\js\site.js

@@ -55,7 +55,7 @@
             <div class="form-field"><label>Contact No *</label><input type="text" id="f-contact" placeholder="Enter contact number" required /></div>
             <div class="form-field"><label>Address</label><input type="text" id="f-address" placeholder="Enter address" /></div>
             <button type="submit" class="btn-primary-full">Save Customer</button>
-            <button type="button" onclick="closeModal('add-modal')" style="width:100%;padding:12px;background:transparent;border:1px solid var(--border);border-radius:var(--radius-md);cursor:pointer;font-size:var(--text-base);color:var(--text-secondary);margin-top:8px;">Cancel</button>
+            <button type="button" class="btn-cancel" onclick="closeModal('add-modal')">Cancel</button>
         </form>
     </div>
 </div>
@@ -130,11 +130,11 @@ function renderTable() {
             </td>
         </tr>`).join('');
     
-    renderPagination(totalPages, start, end);
+    renderPagination(totalPages, currentItems, filteredCustomers, start, end);
     lucide.createIcons();
 }
 
-function renderPagination(totalPages, start, end) {
+function renderPagination(totalPages, currentItems, filteredCustomers, start, end) {
     const controls = document.getElementById('pagination-controls');
     if (totalPages <= 1) {
         controls.style.display = 'none';
@@ -142,7 +142,7 @@ function renderPagination(totalPages, start, end) {
     }
     
     controls.style.display = 'flex';
-    document.getElementById('pagination-info').textContent = `Showing ${Math.min(start + 1, currentItems.length === 0 ? 0 : start + currentItems.length)} to ${end} of ${filteredCustomers?.length || customers.length} Entries`;
+    document.getElementById('pagination-info').textContent = `Showing ${Math.min(start + 1, filteredCustomers.length)} to ${Math.min(end, filteredCustomers.length)} of ${filteredCustomers.length} Entries`;
     document.getElementById('pagination-pages').textContent = `${currentPage} / ${totalPages}`;
     
     const btnPrev = document.getElementById('btn-prev');

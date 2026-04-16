@@ -74,9 +74,15 @@ namespace Tailor_Management_System.Controllers.Api
             var tailor = await _context.Tailors.FirstOrDefaultAsync(t => t.Id == id && t.UserId == CurrentUserId);
             if (tailor == null) return NotFound();
 
+            // SOFT REMOVAL: Just unassign the tailor from their orders
+            var orders = await _context.Orders.Where(o => o.AssignedTailorId == id).ToListAsync();
+            foreach (var order in orders) {
+                order.AssignedTailorId = null;
+            }
+
             _context.Tailors.Remove(tailor);
             await _context.SaveChangesAsync();
-            return Ok(new { message = "Tailor deleted" });
+            return Ok(new { _id = id, id = id, message = "Tailor deleted" });
         }
     }
 }

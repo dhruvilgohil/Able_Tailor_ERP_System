@@ -51,6 +51,12 @@ namespace Tailor_Management_System.Data
                 .WithMany()
                 .HasForeignKey(o => o.MeasurementId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<IncomeItem>()
+                .HasOne(i => i.Order)
+                .WithMany()
+                .HasForeignKey(i => i.OrderId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

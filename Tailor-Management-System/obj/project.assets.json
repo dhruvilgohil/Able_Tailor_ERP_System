@@ -3519,11 +3519,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\tailor-erp (2)\\tailor-erp\\sem-6 viraj project\\Tailor-Management-System\\Tailor-Management-System\\Tailor-Management-System.csproj",
+      "projectUniqueName": "D:\\.net\\Able_Tailor_ERP_System - Copy\\Able_Tailor_ERP_System - Copy - Copy\\Able_Tailor_ERP_System\\Tailor-Management-System\\Tailor-Management-System.csproj",
       "projectName": "Tailor-Management-System",
-      "projectPath": "D:\\tailor-erp (2)\\tailor-erp\\sem-6 viraj project\\Tailor-Management-System\\Tailor-Management-System\\Tailor-Management-System.csproj",
+      "projectPath": "D:\\.net\\Able_Tailor_ERP_System - Copy\\Able_Tailor_ERP_System - Copy - Copy\\Able_Tailor_ERP_System\\Tailor-Management-System\\Tailor-Management-System.csproj",
       "packagesPath": "C:\\Users\\dhruv\\.nuget\\packages\\",
-      "outputPath": "D:\\tailor-erp (2)\\tailor-erp\\sem-6 viraj project\\Tailor-Management-System\\Tailor-Management-System\\obj\\",
+      "outputPath": "D:\\.net\\Able_Tailor_ERP_System - Copy\\Able_Tailor_ERP_System - Copy - Copy\\Able_Tailor_ERP_System\\Tailor-Management-System\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

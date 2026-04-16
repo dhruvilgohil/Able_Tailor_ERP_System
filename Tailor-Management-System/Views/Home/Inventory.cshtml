@@ -48,7 +48,7 @@
                 <div class="form-field"><label>Price/Unit (₹)</label><input type="number" id="inv-price" placeholder="0" /></div>
             </div>
             <button type="submit" class="btn-primary-full">Save Item</button>
-            <button type="button" onclick="closeModal('inv-modal')" style="width:100%;padding:12px;background:transparent;border:1px solid var(--border);border-radius:var(--radius-md);cursor:pointer;font-size:var(--text-base);color:var(--text-secondary);margin-top:8px;">Cancel</button>
+            <button type="button" class="btn-cancel" onclick="closeModal('inv-modal')">Cancel</button>
         </form>
     </div>
 </div>
@@ -100,11 +100,11 @@ function renderTable() {
                 <td style="text-align:center;"><button class="btn-delete" onclick="deleteItem('${it._id}')"><i data-lucide="trash-2" style="width:18px;height:18px;"></i></button></td>
             </tr>`).join('');
     
-    renderPagination(totalPages, start, end);
+    renderPagination(totalPages, currentItems, filteredItems, start, end);
     lucide.createIcons();
 }
 
-function renderPagination(totalPages, start, end) {
+function renderPagination(totalPages, currentItems, filteredItems, start, end) {
     const controls = document.getElementById('pagination-controls');
     if (totalPages <= 1) {
         controls.style.display = 'none';
@@ -112,7 +112,7 @@ function renderPagination(totalPages, start, end) {
     }
     
     controls.style.display = 'flex';
-    document.getElementById('pagination-info').textContent = `Showing ${Math.min(start + 1, currentItems.length === 0 ? 0 : start + currentItems.length)} to ${end} of ${filteredItems?.length || globalItems.length} Entries`;
+    document.getElementById('pagination-info').textContent = `Showing ${Math.min(start + 1, filteredItems.length)} to ${Math.min(end, filteredItems.length)} of ${filteredItems.length} Entries`;
     document.getElementById('pagination-pages').textContent = `${currentPage} / ${totalPages}`;
     
     const btnPrev = document.getElementById('btn-prev');

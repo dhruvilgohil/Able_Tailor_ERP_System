@@ -29,7 +29,12 @@ namespace Tailor_Management_System.Controllers.Api
                 .Where(i => i.UserId == CurrentUserId)
                 .OrderByDescending(i => i.Date)
                 .ToListAsync();
-            return Ok(incomes);
+            var result = incomes.Select(i => new {
+                _id = i.Id, id = i.Id, i.UserId,
+                i.CustomerName, i.OrderId, i.PaymentMethod,
+                i.Amount, i.Date, i.CreatedAt, i.UpdatedAt
+            });
+            return Ok(result);
         }
 
         [HttpPost]
@@ -43,7 +48,11 @@ namespace Tailor_Management_System.Controllers.Api
             _context.Incomes.Add(income);
             await _context.SaveChangesAsync();
 
-            return Ok(income);
+            return Ok(new {
+                _id = income.Id, id = income.Id, income.UserId,
+                income.CustomerName, income.OrderId, income.PaymentMethod,
+                income.Amount, income.Date, income.CreatedAt, income.UpdatedAt
+            });
         }
 
         [HttpPut("{id}")]
@@ -59,7 +68,11 @@ namespace Tailor_Management_System.Controllers.Api
             income.UpdatedAt = DateTime.UtcNow;
 
             await _context.SaveChangesAsync();
-            return Ok(income);
+            return Ok(new {
+                _id = income.Id, id = income.Id, income.UserId,
+                income.CustomerName, income.OrderId, income.PaymentMethod,
+                income.Amount, income.Date, income.CreatedAt, income.UpdatedAt
+            });
         }
 
         [HttpDelete("{id}")]

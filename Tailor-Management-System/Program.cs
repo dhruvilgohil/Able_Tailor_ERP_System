@@ -60,6 +60,22 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
+// Automatically apply pending migrations on startup
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        var context = services.GetRequiredService<TailorDbContext>();
+        context.Database.Migrate();
+        Console.WriteLine("[Database] Auto-migration successful.");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"[Database] Error applying migrations: {ex.Message}");
+    }
+}
+
 // Configure the app to listen on port 5000
 app.Urls.Add("http://localhost:5000");
 
@@ -81,17 +97,13 @@ app.UseSession();
 
 app.MapStaticAssets();
 
-// Commented out to allow React to handle the root path ("/")
-// app.MapControllerRoute(
-//     name: "default",
-//     pattern: "{controller=Home}/{action=Index}/{id?}")
-//     .WithStaticAssets();
+// Enable MVC Routing for standard views
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
-// Enable Attribute Routing for API Controllers
-app.MapControllers();
-
-// Map fallback for React SPA routing
-app.MapFallbackToFile("index.html");
+// Map fallback for React SPA routing - Disabled to use MVC views
+// app.MapFallbackToFile("index.html");
 
 
 app.Run();

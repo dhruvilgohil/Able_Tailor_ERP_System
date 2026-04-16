@@ -2,25 +2,29 @@
     ViewData["Title"] = "Orders";
 }
 
-<div style="display:flex;flex-direction:column;gap:var(--spacing-2xl);">
+<div style="display:flex;flex-direction:column;gap:24px;">
 
-    <!-- Tabs (React: 'All Orders', 'Pending', 'In Progress', 'Completed') -->
-    <div class="tabs-bar">
-        <button class="tab-btn active" onclick="setTab('All Orders',this)">All Orders</button>
-        <button class="tab-btn" onclick="setTab('Pending',this)">Pending</button>
-        <button class="tab-btn" onclick="setTab('In Progress',this)">In Progress</button>
-        <button class="tab-btn" onclick="setTab('Completed',this)">Completed</button>
+    <!-- Top Bar -->
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+        <div class="tabs-bar" style="margin-bottom:0;">
+            <button class="tab-btn active" onclick="setTab('all',this)">All Orders</button>
+            <button class="tab-btn" onclick="setTab('pending',this)">Pending</button>
+            <button class="tab-btn" onclick="setTab('inprogress',this)">In Progress</button>
+            <button class="tab-btn" onclick="setTab('completed',this)">Completed</button>
+        </div>
+        <button class="add-btn" onclick="openAdd()" style="display:flex;align-items:center;gap:8px;">
+            <i data-lucide="plus" style="width:18px;height:18px;"></i> Add Order
+        </button>
     </div>
 
-    <!-- Add Button Row -->
-    <div class="action-bar">
-        <button class="add-btn" onclick="openAdd()">Add Order</button>
+    <!-- Status Message -->
+    <div id="ord-status" style="padding:32px;text-align:center;color:#94A3B8;font-size:15px;font-weight:600;background:#fff;border-radius:16px;border:1px solid #eef2f7;">
+        Loading orders...
     </div>
 
     <!-- Table -->
-    <div class="table-wrapper">
-        <div id="ord-loading" style="padding:32px;text-align:center;color:#9CA3AF;">Loading...</div>
-        <table class="data-table" id="ord-table" style="display:none;">
+    <div class="table-wrapper" id="ord-table-wrap" style="display:none;">
+        <table class="data-table" id="ord-table">
             <thead>
                 <tr>
                     <th>Customer</th>
@@ -38,258 +42,334 @@
         </table>
     </div>
 
-    <!-- Pagination Controls -->
-    <div id="pagination-controls" style="display:none; justify-content: space-between; align-items: center; padding: 16px; background-color: var(--surface); border: 1px solid var(--border); border-top: none; border-bottom-left-radius: var(--radius-lg); border-bottom-right-radius: var(--radius-lg);">
-        <span id="pagination-info" style="color: var(--text-secondary); font-size: 14px;"></span>
-        <div style="display: flex; gap: 8px;">
-            <button id="btn-prev" onclick="prevPage()" style="padding: 8px 12px; border: 1px solid var(--border); border-radius: var(--radius-md); background-color: white; cursor: pointer; color: var(--text-primary); display: flex; align-items: center; gap: 4px;">
-                <i data-lucide="chevron-left" style="width:16px;height:16px;"></i> Prev
-            </button>
-            <span id="pagination-pages" style="display: flex; align-items: center; padding: 0 12px; font-weight: 500; color: var(--text-primary);"></span>
-            <button id="btn-next" onclick="nextPage()" style="padding: 8px 12px; border: 1px solid var(--border); border-radius: var(--radius-md); background-color: white; cursor: pointer; color: var(--text-primary); display: flex; align-items: center; gap: 4px;">
-                Next <i data-lucide="chevron-right" style="width:16px;height:16px;"></i>
-            </button>
+    <!-- Pagination -->
+    <div id="ord-pager" style="display:none;justify-content:space-between;align-items:center;padding:16px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;">
+        <span id="ord-pager-info" style="color:#64748b;font-size:14px;font-weight:500;"></span>
+        <div style="display:flex;gap:8px;align-items:center;">
+            <button onclick="prevPage()" class="btn-cancel" style="width:auto;padding:8px 16px;">← Prev</button>
+            <span id="ord-pager-pages" style="font-weight:700;padding:0 12px;color:#1e293b;"></span>
+            <button onclick="nextPage()" class="btn-cancel" style="width:auto;padding:8px 16px;">Next →</button>
         </div>
     </div>
 </div>
 
-<!-- Add/Edit Order Modal -->
+<!-- ── Add / Edit Modal ────────────────────────────── -->
 <div class="modal-overlay" id="order-modal">
-    <div class="modal-box" style="width:560px;">
+    <div class="modal-box">
         <div class="modal-header-title">
             <h2 id="order-modal-title">Add Order</h2>
-            <p id="order-modal-sub">Fill out the form to create a new order</p>
+            <p id="order-modal-sub">Fill in the details below</p>
         </div>
         <div class="modal-divider"></div>
         <form onsubmit="event.preventDefault(); saveOrder();">
             <input type="hidden" id="order-edit-id" />
             <div class="form-row">
                 <div class="form-field"><label>Customer *</label><select id="o-customer" required></select></div>
-                <div class="form-field"><label>Assign Tailor</label><select id="o-tailor"><option value="">— None —</option></select></div>
+                <div class="form-field"><label>Tailor</label><select id="o-tailor"><option value="">— None —</option></select></div>
             </div>
             <div class="form-field"><label>Measurement</label><select id="o-measurement"><option value="">— None —</option></select></div>
-            <div class="form-field"><label>Services (comma separated)</label><input type="text" id="o-services" placeholder="e.g. Shirt, Pants" /></div>
+            <div class="form-field"><label>Services (comma separated)</label><input type="text" id="o-services" placeholder="e.g. Shirt, Pant" /></div>
             <div class="form-row">
                 <div class="form-field"><label>Delivery Date</label><input type="date" id="o-date" /></div>
-                <div class="form-field"><label>Status</label><select id="o-status"><option>Pending</option><option>In Progress</option><option>Completed</option></select></div>
+                <div class="form-field"><label>Status</label>
+                    <select id="o-status">
+                        <option value="Pending">Pending</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+                </div>
             </div>
             <div class="form-row">
-                <div class="form-field"><label>Payment Method</label><select id="o-payment"><option value="Pending">Pending</option><option value="Cash">Cash</option><option value="Online">Online</option></select></div>
-                <div class="form-field"><label>Custom Total (₹)</label><input type="number" id="o-total" placeholder="0" /></div>
+                <div class="form-field"><label>Payment</label>
+                    <select id="o-payment">
+                        <option value="Pending">Pending</option>
+                        <option value="Cash">Cash</option>
+                        <option value="Online">Online</option>
+                    </select>
+                </div>
+                <div class="form-field"><label>Total (₹)</label><input type="number" id="o-total" value="0" min="0" /></div>
             </div>
             <button type="submit" class="btn-primary-full">Save Order</button>
-            <button type="button" onclick="closeModal('order-modal')" style="width:100%;padding:12px;background:transparent;border:1px solid var(--border);border-radius:var(--radius-md);cursor:pointer;font-size:var(--text-base);color:var(--text-secondary);margin-top:8px;">Cancel</button>
+            <button type="button" class="btn-cancel" onclick="closeModal('order-modal')">Cancel</button>
         </form>
     </div>
 </div>
 
-<!-- View Order Modal -->
+<!-- ── View Modal ──────────────────────────────────── -->
 <div class="modal-overlay" id="view-order-modal">
-    <div class="modal-box">
-        <div class="modal-header-title"><h2>Order Details</h2></div>
-        <div class="modal-divider"></div>
-        <div id="view-order-content"></div>
-        <button class="btn-primary-full" onclick="closeModal('view-order-modal')" style="margin-top:8px;">Close</button>
+    <div class="modal-box" style="max-width:560px;padding:0;overflow:hidden;">
+        <div style="background:linear-gradient(135deg,#4F46E5,#6366f1);padding:24px 28px;position:relative;">
+            <div style="display:flex;align-items:center;gap:12px;">
+                <div style="width:42px;height:42px;background:rgba(255,255,255,0.2);border-radius:12px;display:flex;align-items:center;justify-content:center;">
+                    <i data-lucide="package" style="width:20px;height:20px;color:#fff;"></i>
+                </div>
+                <div>
+                    <h2 style="color:#fff;font-size:18px;font-weight:800;margin:0;">Order Details</h2>
+                    <p id="view-ord-sub" style="color:rgba(255,255,255,0.75);font-size:13px;margin:2px 0 0;"></p>
+                </div>
+            </div>
+            <button onclick="closeModal('view-order-modal')" style="position:absolute;top:18px;right:18px;background:rgba(255,255,255,0.15);border:none;width:30px;height:30px;border-radius:8px;cursor:pointer;color:#fff;display:flex;align-items:center;justify-content:center;">
+                <i data-lucide="x" style="width:16px;height:16px;"></i>
+            </button>
+        </div>
+        <div id="view-order-content" style="padding:24px 28px;display:grid;grid-template-columns:1fr 1fr;gap:12px;"></div>
+        <div style="padding:0 28px 24px;"><button class="btn-primary-full" onclick="closeModal('view-order-modal')">Close</button></div>
     </div>
 </div>
 
 @section Scripts {
 <script>
-let allOrders = [], currentTab = 'All Orders';
-let currentPage = 1;
-const itemsPerPage = 10;
-let globalSearchQuery = '';
+// ─── Global State ────────────────────────────────────
+let ALL   = [];        // raw API data
+let VIEW  = [];        // after tab + search filter
+let TAB   = 'all';     // 'all' | 'pending' | 'inprogress' | 'completed'
+let PAGE  = 1;
+let SEARCH = '';
+const PER = 8;
 
-window.onGlobalSearch = function(query) {
-    globalSearchQuery = query.toLowerCase();
-    currentPage = 1; // Reset to first page when searching
-    renderTable();
-};
+window.onGlobalSearch = q => { SEARCH = (q||'').toLowerCase().trim(); PAGE = 1; render(); };
 
+// ─── Helpers ─────────────────────────────────────────
+// Parse services - API returns raw JSON array or null
+function parseServices(raw) {
+    if (!raw) return [];
+    if (Array.isArray(raw)) return raw;
+    try { return JSON.parse(raw); } catch { return [raw]; }
+}
+
+// Safe status token (removes whitespace/punctuation)
+function tok(s) { return (s || '').toLowerCase().replace(/[^a-z]/g, ''); }
+
+function badge(status) {
+    const t = tok(status);
+    let cls = 'Pending', lbl = status || 'Pending';
+    if (t === 'inprogress' || t.includes('progress'))  { cls = 'InProgress'; lbl = 'In Progress'; }
+    else if (t === 'completed' || t.includes('complet')){ cls = 'Completed';  lbl = 'Completed'; }
+    else { lbl = 'Pending'; }
+    return `<span class="status-badge status-${cls}">${lbl}</span>`;
+}
+
+function field(label, val) {
+    return `<div style="background:#f8fafc;border-radius:10px;padding:12px 14px;border:1px solid #eef2f7;">
+        <p style="font-size:11px;font-weight:700;color:#94a3b8;text-transform:uppercase;margin:0 0 4px;">${label}</p>
+        <p style="font-weight:700;color:#1e293b;margin:0;font-size:14px;">${val||'—'}</p>
+    </div>`;
+}
+
+function status(msg) {
+    document.getElementById('ord-status').style.display = 'block';
+    document.getElementById('ord-status').textContent = msg;
+    document.getElementById('ord-table-wrap').style.display = 'none';
+    document.getElementById('ord-pager').style.display = 'none';
+}
+
+// ─── Load ─────────────────────────────────────────────
 async function loadOrders() {
+    status('Loading orders...');
     try {
         const [orders, custs, tailors, meas] = await Promise.all([
-            apiFetch('/api/orders'), apiFetch('/api/customers'),
-            apiFetch('/api/tailors'), apiFetch('/api/measurements')
+            apiFetch('/api/orders'),
+            apiFetch('/api/customers'),
+            apiFetch('/api/tailors'),
+            apiFetch('/api/measurements')
         ]);
-        allOrders = orders;
 
+        ALL = orders || [];
+
+        // Dropdowns
         document.getElementById('o-customer').innerHTML =
             '<option value="">Select Customer</option>' +
-            custs.map(c => `<option value="${c._id}">${c.customerName}</option>`).join('');
+            (custs||[]).map(c => `<option value="${c._id||c.id}">${c.customerName||c.name}</option>`).join('');
         document.getElementById('o-tailor').innerHTML =
             '<option value="">— None —</option>' +
-            tailors.map(t => `<option value="${t._id}">${t.name}</option>`).join('');
+            (tailors||[]).map(t => `<option value="${t._id||t.id}">${t.name}</option>`).join('');
         document.getElementById('o-measurement').innerHTML =
             '<option value="">— None —</option>' +
-            meas.map(m => `<option value="${m._id}">${m.title || m.customerId?.customerName || m._id}</option>`).join('');
+            (meas||[]).map(m => `<option value="${m._id||m.id}">${m.title||('Measurement #'+(m._id||m.id))}</option>`).join('');
 
-        renderTable();
-        document.getElementById('ord-loading').style.display = 'none';
-        document.getElementById('ord-table').style.display = 'table';
-    } catch(e) { document.getElementById('ord-loading').textContent = 'Failed to load.'; }
+        render();
+    } catch(e) {
+        status('Failed to load orders: ' + e.message);
+        console.error('[Orders] loadOrders error:', e);
+    }
 }
 
-function setTab(tab, btn) {
-    currentTab = tab;
-    currentPage = 1; // Reset to page 1 on tab change
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    renderTable();
+// ─── Filter ───────────────────────────────────────────
+function filter() {
+    let list = [...ALL];
+
+    // Tab filter
+    if (TAB !== 'all') {
+        list = list.filter(o => {
+            const t = tok(o.status);
+            if (TAB === 'pending')    return t === 'pending';
+            if (TAB === 'inprogress') return t === 'inprogress';
+            if (TAB === 'completed')  return t === 'completed';
+            return true;
+        });
+    }
+
+    // Search filter
+    if (SEARCH) {
+        list = list.filter(o => {
+            const name = (o.customerId?.customerName || '').toLowerCase();
+            const svcs = parseServices(o.services).join(' ').toLowerCase();
+            return name.includes(SEARCH) || svcs.includes(SEARCH);
+        });
+    }
+
+    return list;
 }
 
-function renderReactBadge(status) {
-    const s = { 'Completed':'background:#A7F3D0;color:#047857;','In Progress':'background:#FDE68A;color:#B45309;','Pending':'background:#E5E7EB;color:#374151;' }[status] || 'background:#FF8A8A;color:#fff;';
-    return `<span style="padding:6px 24px;border-radius:20px;font-size:14px;font-weight:500;white-space:nowrap;display:inline-block;${s}">${status}</span>`;
-}
+// ─── Render ───────────────────────────────────────────
+function render() {
+    VIEW = filter();
 
-function renderTable() {
-    let list = currentTab === 'All Orders' ? allOrders : allOrders.filter(o => o.status === currentTab);
-    
-    // Apply search filter
-    list = list.filter(o => {
-        const custName = (o.customerId?.customerName || o.customerId?.name || '').toLowerCase();
-        return custName.includes(globalSearchQuery);
-    });
+    const total = VIEW.length;
+    const pages = Math.ceil(total / PER) || 1;
+    if (PAGE > pages) PAGE = pages;
 
-    const totalPages = Math.ceil(list.length / itemsPerPage);
-    if (currentPage > totalPages && totalPages > 0) currentPage = totalPages;
+    const start = (PAGE - 1) * PER;
+    const slice = VIEW.slice(start, start + PER);
 
-    const start = (currentPage - 1) * itemsPerPage;
-    const end = start + itemsPerPage;
-    const currentItems = list.slice(start, end);
+    document.getElementById('ord-status').style.display = 'none';
 
-    document.getElementById('ord-tbody').innerHTML = currentItems.map(o => `
-        <tr>
-            <td>${o.customerId?.customerName || '—'}</td>
-            <td style="font-size:14px;">${(o.services||[]).join(', ')||'—'}</td>
-            <td style="text-align:center;">${renderReactBadge(o.status)}</td>
-            <td>${formatDate(o.targetDeliveryDate)}</td>
-            <td style="font-size:14px;color:var(--text-secondary);">${o.paymentMethod||'—'}</td>
-            <td style="font-weight:600;">₹ ${o.userDefinedTotal||o.calculatedTotal||0}</td>
-            <td style="text-align:center;"><button class="btn-view" onclick='viewOrder(${JSON.stringify(o)})'><i data-lucide="eye" style="width:18px;height:18px;"></i> View</button></td>
-            <td style="text-align:center;"><button class="btn-edit-icon" onclick='editOrder(${JSON.stringify(o)})'><i data-lucide="edit" style="width:18px;height:18px;"></i></button></td>
-            <td style="text-align:center;"><button class="btn-delete" onclick="deleteOrder('${o._id}')"><i data-lucide="trash-2" style="width:18px;height:18px;"></i></button></td>
-        </tr>`).join('');
-    
-    renderPagination(totalPages, list.length, start, end);
+    if (total === 0) {
+        status(TAB === 'all' ? 'No orders yet. Click "+ Add Order" to create one.' :
+               `No "${document.querySelector('.tab-btn.active').textContent}" orders found.`);
+        return;
+    }
+
+    document.getElementById('ord-table-wrap').style.display = 'block';
+
+    document.getElementById('ord-tbody').innerHTML = slice.map((o, i) => {
+        const svcs = parseServices(o.services).join(', ') || '—';
+        const custName = o.customerId?.customerName || '—';
+        const total = o.userDefinedTotal || o.calculatedTotal || o.totalAmount || 0;
+        const idx = start + i;
+        return `<tr>
+            <td style="font-weight:700;color:#1e293b;">${custName}</td>
+            <td style="font-size:13px;color:#475569;">${svcs}</td>
+            <td style="text-align:center;">${badge(o.status)}</td>
+            <td style="font-size:13px;">${formatDate(o.targetDeliveryDate)}</td>
+            <td style="font-size:13px;color:#64748b;">${o.paymentMethod||'—'}</td>
+            <td style="font-weight:800;color:var(--primary);">₹ ${total}</td>
+            <td style="text-align:center;"><button class="btn-view" onclick="viewOrd(${idx})"><i data-lucide="eye" style="width:15px;height:15px;"></i></button></td>
+            <td style="text-align:center;"><button class="btn-edit-icon" onclick="editOrd(${idx})"><i data-lucide="edit" style="width:15px;height:15px;"></i></button></td>
+            <td style="text-align:center;"><button class="btn-delete" onclick="delOrd(${o._id||o.id})"><i data-lucide="trash-2" style="width:15px;height:15px;"></i></button></td>
+        </tr>`;
+    }).join('');
+
+    // Pagination
+    if (total <= PER) {
+        document.getElementById('ord-pager').style.display = 'none';
+    } else {
+        document.getElementById('ord-pager').style.display = 'flex';
+        document.getElementById('ord-pager-info').textContent = `Showing ${start+1}–${Math.min(start+PER, total)} of ${total}`;
+        document.getElementById('ord-pager-pages').textContent = `${PAGE} / ${pages}`;
+    }
+
     lucide.createIcons();
 }
 
-function renderPagination(totalPages, totalItems, start, end) {
-    const controls = document.getElementById('pagination-controls');
-    if (totalPages <= 1) {
-        controls.style.display = 'none';
-        return;
-    }
-    
-    controls.style.display = 'flex';
-    document.getElementById('pagination-info').textContent = `Showing ${Math.min(start + 1, totalItems)} to ${Math.min(end, totalItems)} of ${totalItems} Entries`;
-    document.getElementById('pagination-pages').textContent = `${currentPage} / ${totalPages}`;
-    
-    const btnPrev = document.getElementById('btn-prev');
-    const btnNext = document.getElementById('btn-next');
-    
-    btnPrev.disabled = currentPage === 1;
-    btnPrev.style.backgroundColor = currentPage === 1 ? '#F3F4F6' : 'white';
-    btnPrev.style.color = currentPage === 1 ? '#9CA3AF' : 'var(--text-primary)';
-    btnPrev.style.cursor = currentPage === 1 ? 'not-allowed' : 'pointer';
-
-    btnNext.disabled = currentPage === totalPages;
-    btnNext.style.backgroundColor = currentPage === totalPages ? '#F3F4F6' : 'white';
-    btnNext.style.color = currentPage === totalPages ? '#9CA3AF' : 'var(--text-primary)';
-    btnNext.style.cursor = currentPage === totalPages ? 'not-allowed' : 'pointer';
+// ─── Tab Switch ───────────────────────────────────────
+function setTab(tab, btn) {
+    TAB = tab; PAGE = 1;
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    render();
 }
 
-function prevPage() {
-    if (currentPage > 1) {
-        currentPage--;
-        renderTable();
-    }
-}
+// ─── Pagination ───────────────────────────────────────
+function prevPage() { if (PAGE > 1) { PAGE--; render(); } }
+function nextPage() { if (PAGE < Math.ceil(VIEW.length/PER)) { PAGE++; render(); } }
 
-function nextPage() {
-    const list = currentTab === 'All Orders' ? allOrders : allOrders.filter(o => o.status === currentTab);
-    const totalPages = Math.ceil(list.length / itemsPerPage);
-    if (currentPage < totalPages) {
-        currentPage++;
-        renderTable();
-    }
-}
-
-function openAdd() {
-    document.getElementById('order-modal-title').textContent = 'Add Order';
-    document.getElementById('order-modal-sub').textContent = 'Fill out the form to create a new order';
-    document.getElementById('order-edit-id').value = '';
-    ['o-services','o-total'].forEach(id => document.getElementById(id).value = '');
-    document.getElementById('o-date').value = '';
-    document.getElementById('o-status').value = 'Pending';
-    document.getElementById('o-payment').value = 'Pending';
-    document.getElementById('o-customer').selectedIndex = 0;
-    document.getElementById('o-tailor').selectedIndex = 0;
-    openModal('order-modal');
-}
-
-function editOrder(o) {
-    document.getElementById('order-modal-title').textContent = 'Edit Order';
-    document.getElementById('order-modal-sub').textContent = 'Update the order details below';
-    document.getElementById('order-edit-id').value = o._id;
-    document.getElementById('o-customer').value = o.customerId?._id||o.customerId||'';
-    document.getElementById('o-tailor').value = o.assignedTailor?._id||o.assignedTailor||'';
-    document.getElementById('o-measurement').value = o.measurementId?._id||o.measurementId||'';
-    document.getElementById('o-services').value = (o.services||[]).join(', ');
-    document.getElementById('o-date').value = o.targetDeliveryDate?o.targetDeliveryDate.substring(0,10):'';
-    document.getElementById('o-status').value = o.status||'Pending';
-    document.getElementById('o-payment').value = o.paymentMethod||'Pending';
-    document.getElementById('o-total').value = o.userDefinedTotal||'';
-    openModal('order-modal');
-}
-
-function viewOrder(o) {
-    document.getElementById('view-order-content').innerHTML = `
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-            <div><p style="font-size:12px;font-weight:600;color:#6B7280;margin-bottom:4px;">Customer</p><p style="font-weight:700;">${o.customerId?.customerName||'—'}</p></div>
-            <div><p style="font-size:12px;font-weight:600;color:#6B7280;margin-bottom:4px;">Status</p>${renderReactBadge(o.status)}</div>
-            <div><p style="font-size:12px;font-weight:600;color:#6B7280;margin-bottom:4px;">Services</p><p>${(o.services||[]).join(', ')||'—'}</p></div>
-            <div><p style="font-size:12px;font-weight:600;color:#6B7280;margin-bottom:4px;">Delivery</p><p>${formatDate(o.targetDeliveryDate)}</p></div>
-            <div><p style="font-size:12px;font-weight:600;color:#6B7280;margin-bottom:4px;">Tailor</p><p>${o.assignedTailor?.name||'—'}</p></div>
-            <div><p style="font-size:12px;font-weight:600;color:#6B7280;margin-bottom:4px;">Payment</p><p>${o.paymentMethod||'—'}</p></div>
-            <div style="grid-column:span 2;"><p style="font-size:12px;font-weight:600;color:#6B7280;margin-bottom:4px;">Total</p><p style="font-weight:800;font-size:24px;color:#4F46E5;">₹ ${o.userDefinedTotal||o.calculatedTotal||0}</p></div>
+// ─── View Modal ───────────────────────────────────────
+function viewOrd(idx) {
+    const o = VIEW[idx]; if (!o) return;
+    const custName = o.customerId?.customerName || '—';
+    const svcs = parseServices(o.services).join(', ') || '—';
+    const total = o.userDefinedTotal || o.calculatedTotal || o.totalAmount || 0;
+    document.getElementById('view-ord-sub').textContent = custName;
+    document.getElementById('view-order-content').innerHTML =
+        field('Status', badge(o.status)) +
+        field('Services', svcs) +
+        field('Delivery Date', formatDate(o.targetDeliveryDate)) +
+        field('Assigned Tailor', o.assignedTailor?.name || '—') +
+        field('Payment Method', o.paymentMethod || '—') +
+        `<div style="background:linear-gradient(135deg,#EEF2FF,#E0E7FF);border-radius:10px;padding:12px 14px;border:1px solid #c7d2fe;">
+            <p style="font-size:11px;font-weight:700;color:#4F46E5;text-transform:uppercase;margin:0 0 4px;">Total Amount</p>
+            <p style="font-weight:900;color:#4F46E5;margin:0;font-size:26px;">₹ ${total}</p>
         </div>`;
     openModal('view-order-modal');
+    lucide.createIcons();
 }
 
+// ─── Edit Modal ───────────────────────────────────────
+function editOrd(idx) {
+    const o = VIEW[idx]; if (!o) return;
+    document.getElementById('order-modal-title').textContent = 'Edit Order';
+    document.getElementById('order-modal-sub').textContent = 'Update the order details below';
+    document.getElementById('order-edit-id').value = o._id || o.id;
+    document.getElementById('o-customer').value = o.customerId?._id || o.customerId?.id || o.customerId || '';
+    document.getElementById('o-tailor').value = o.assignedTailor?._id || o.assignedTailor?.id || o.assignedTailorId || '';
+    document.getElementById('o-measurement').value = o.measurementId?._id || o.measurementId?.id || o.measurementId || '';
+    document.getElementById('o-services').value = parseServices(o.services).join(', ');
+    document.getElementById('o-date').value = o.targetDeliveryDate ? o.targetDeliveryDate.slice(0,10) : '';
+    document.getElementById('o-status').value = o.status || 'Pending';
+    document.getElementById('o-payment').value = o.paymentMethod || 'Pending';
+    document.getElementById('o-total').value = o.userDefinedTotal || o.calculatedTotal || o.totalAmount || 0;
+    openModal('order-modal');
+}
+
+// ─── Add ──────────────────────────────────────────────
+function openAdd() {
+    document.getElementById('order-modal-title').textContent = 'Add Order';
+    document.getElementById('order-modal-sub').textContent = 'Fill in the details to create a new order';
+    document.getElementById('order-edit-id').value = '';
+    ['o-services'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('o-total').value = '0';
+    document.getElementById('o-date').value = '';
+    ['o-status', 'o-payment', 'o-customer', 'o-tailor', 'o-measurement'].forEach(id => {
+        document.getElementById(id).selectedIndex = 0;
+    });
+    openModal('order-modal');
+}
+
+// ─── Save ─────────────────────────────────────────────
 async function saveOrder() {
     const id = document.getElementById('order-edit-id').value;
     const body = {
-        customerId: document.getElementById('o-customer').value,
-                assignedTailorId: document.getElementById('o-tailor').value || null,
-        measurementId: document.getElementById('o-measurement').value||null,
-        services: document.getElementById('o-services').value.split(',').map(s=>s.trim()).filter(Boolean),
-        targetDeliveryDate: document.getElementById('o-date').value||null,
-        status: document.getElementById('o-status').value,
-        paymentMethod: document.getElementById('o-payment').value,
-        userDefinedTotal: parseFloat(document.getElementById('o-total').value)||0
+        customerId:       document.getElementById('o-customer').value,
+        assignedTailorId: document.getElementById('o-tailor').value || null,
+        measurementId:    document.getElementById('o-measurement').value || null,
+        services:         document.getElementById('o-services').value.split(',').map(s=>s.trim()).filter(Boolean),
+        targetDeliveryDate: document.getElementById('o-date').value || null,
+        status:           document.getElementById('o-status').value,
+        paymentMethod:    document.getElementById('o-payment').value,
+        userDefinedTotal: parseFloat(document.getElementById('o-total').value) || 0
     };
-    if (!body.customerId) return showToast('Customer required', 'error');
+    if (!body.customerId) return showToast('Please select a customer', 'error');
     try {
         if (id) await apiFetch(`/api/orders/${id}`, 'PUT', body);
-        else await apiFetch('/api/orders', 'POST', body);
+        else    await apiFetch('/api/orders', 'POST', body);
         closeModal('order-modal');
         showToast(id ? 'Order updated!' : 'Order created!');
         loadOrders();
     } catch(e) { showToast('Error: ' + e.message, 'error'); }
 }
 
-async function deleteOrder(id) {
-    if (!confirm('Delete this order?')) return;
-    try { await apiFetch(`/api/orders/${id}`, 'DELETE'); showToast('Deleted!'); loadOrders(); }
-    catch(e) { showToast('Failed', 'error'); }
+// ─── Delete ───────────────────────────────────────────
+async function delOrd(id) {
+    if (!confirm('Delete this order permanently?')) return;
+    try { await apiFetch(`/api/orders/${id}`, 'DELETE'); showToast('Order deleted'); loadOrders(); }
+    catch(e) { showToast('Delete failed: ' + e.message, 'error'); }
 }
 
-function openModal(id) { document.getElementById(id).classList.add('show'); }
+function openModal(id)  { document.getElementById(id).classList.add('show'); }
 function closeModal(id) { document.getElementById(id).classList.remove('show'); }
 
+// ─── Init ─────────────────────────────────────────────
 loadOrders();
 </script>
 }

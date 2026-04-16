@@ -143,11 +143,15 @@ namespace Tailor_Management_System.Controllers.Api
                              ?? ParseIntSafe(body, "assigned_tailor")
                              ?? ParseIntSafe(body, "tailor_id");
 
-                int customerId = ParseIntSafe(body, "customerId") 
+                int? customerId = ParseIntSafe(body, "customerId") 
                                ?? ParseIntSafe(body, "customerIdId") 
                                ?? ParseIntSafe(body, "customer") 
-                               ?? ParseIntSafe(body, "customer_id")
-                               ?? 0;
+                               ?? ParseIntSafe(body, "customer_id");
+
+                if (customerId == null || customerId <= 0)
+                {
+                    return BadRequest(new { message = "Customer is required. Please select a valid customer." });
+                }
 
                 int? measurementId = ParseIntSafe(body, "measurementId") 
                                   ?? ParseIntSafe(body, "measurement") 
@@ -159,7 +163,7 @@ namespace Tailor_Management_System.Controllers.Api
                 var order = new Order
                 {
                     UserId = CurrentUserId,
-                    CustomerId = customerId,
+                    CustomerId = customerId.Value,
                     MeasurementId = measurementId,
                     Services = body.TryGetProperty("services", out var s) ? s.GetRawText() : null,
                     ItemsUsed = body.TryGetProperty("itemsUsed", out var i) ? i.GetRawText() : null,
@@ -210,7 +214,8 @@ namespace Tailor_Management_System.Controllers.Api
 
                 // Core fields with fallback names
                 var customerId = ParseIntSafe(body, "customerId") ?? ParseIntSafe(body, "customerIdId") ?? ParseIntSafe(body, "customer") ?? ParseIntSafe(body, "customer_id");
-                if (customerId != null) order.CustomerId = customerId.Value;
+                if (customerId != null && customerId > 0) order.CustomerId = customerId.Value;
+                else if (customerId == 0) return BadRequest(new { message = "Invalid Customer selection." });
 
                 var measurementId = ParseIntSafe(body, "measurementId") ?? ParseIntSafe(body, "measurement") ?? ParseIntSafe(body, "measurement_id");
                 if (measurementId != null) order.MeasurementId = measurementId;
@@ -311,9 +316,15 @@ namespace Tailor_Management_System.Controllers.Api
             var order = await _context.Orders.FirstOrDefaultAsync(o => o.Id == id && o.UserId == CurrentUserId);
             if (order == null) return NotFound();
 
+            // Manually clean up any related Income record to avoid FK errors in SQLite
+            var incomes = await _context.Incomes.Where(i => i.OrderId == id).ToListAsync();
+            if (incomes.Any()) {
+                _context.Incomes.RemoveRange(incomes);
+            }
+
             _context.Orders.Remove(order);
             await _context.SaveChangesAsync();
-            return Ok(new { message = "Order deleted" });
+            return Ok(new { _id = id, id = id, message = "Order deleted" });
         }
     }
 }

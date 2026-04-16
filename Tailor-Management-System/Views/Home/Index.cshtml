@@ -1,61 +1,61 @@
-﻿@{
+@{
     ViewData["Title"] = "Dashboard";
 }
 
 <div style="display:flex;flex-direction:column;gap:var(--spacing-2xl);">
 
-    <!-- STAT CARDS (React: grid 4 cols, 24px gap) -->
+    <!-- STAT CARDS (Premium Glassmorphism Style) -->
     <div class="stats-grid">
-        <div class="stat-card">
-            <div>
+        <div class="stat-card premium card-blue">
+            <div class="stat-content">
                 <p class="stat-label">Total Customer</p>
                 <h3 class="stat-value" id="stat-customers">—</h3>
             </div>
-            <div style="color:var(--primary);opacity:0.8;">
-                <i data-lucide="users" style="width:28px;height:28px;"></i>
+            <div class="stat-icon">
+                <i data-lucide="users" style="width:32px;height:32px;"></i>
             </div>
         </div>
-        <div class="stat-card">
-            <div>
+        <div class="stat-card premium card-emerald">
+            <div class="stat-content">
                 <p class="stat-label">Total Orders</p>
                 <h3 class="stat-value" id="stat-orders">—</h3>
             </div>
-            <div style="color:var(--primary);opacity:0.8;">
-                <i data-lucide="receipt" style="width:28px;height:28px;"></i>
+            <div class="stat-icon">
+                <i data-lucide="receipt" style="width:32px;height:32px;"></i>
             </div>
         </div>
-        <div class="stat-card">
-            <div>
+        <div class="stat-card premium card-amber">
+            <div class="stat-content">
                 <p class="stat-label">Pending Orders</p>
                 <h3 class="stat-value" id="stat-pending">—</h3>
             </div>
-            <div style="color:var(--primary);">
-                <i data-lucide="clock" style="width:28px;height:28px;"></i>
+            <div class="stat-icon">
+                <i data-lucide="clock" style="width:32px;height:32px;"></i>
             </div>
         </div>
-        <div class="stat-card">
-            <div>
+        <div class="stat-card premium card-rose">
+            <div class="stat-content">
                 <p class="stat-label">Total Income</p>
                 <h3 class="stat-value" id="stat-income">—</h3>
             </div>
-            <div style="color:var(--primary);opacity:0.8;">
-                <i data-lucide="wallet" style="width:28px;height:28px;"></i>
+            <div class="stat-icon">
+                <i data-lucide="wallet" style="width:32px;height:32px;"></i>
             </div>
         </div>
     </div>
 
-    <!-- RECENT ORDERS TABLE (React: white card, border-collapse separate, borderSpacing 0 8px) -->
-    <div style="background-color:var(--surface);border-radius:12px;box-shadow:var(--shadow-sm);overflow:hidden;padding:8px;">
+    <!-- RECENT ORDERS TABLE -->
+    <div class="table-wrapper">
         <div id="dash-loading" style="padding:32px;text-align:center;color:#9CA3AF;">Loading orders...</div>
-        <table class="dashboard-table" id="dash-table" style="display:none;">
+        <table class="data-table" id="dash-table" style="display:none;">
             <thead>
                 <tr>
-                    <th>Customer Name</th>
-                    <th class="center">Services</th>
-                    <th class="center">Status</th>
-                    <th class="center">Assigned Tailor</th>
-                    <th class="center">Date</th>
-                    <th class="center"></th>
+                    <th>Customer</th>
+                    <th>Services</th>
+                    <th style="text-align:center;">Status</th>
+                    <th>Tailor</th>
+                    <th>Date</th>
+                    <th style="text-align:center;">Action</th>
                 </tr>
             </thead>
             <tbody id="dash-tbody"></tbody>
@@ -95,14 +95,14 @@ async function loadDashboard() {
         const tbody = document.getElementById('dash-tbody');
         tbody.innerHTML = recent.map(o => {
             const dateStr = new Date(o.createdAt).toLocaleDateString('en-GB').replace(/\//g, '-');
-            return `<tr style="background-color:var(--surface);">
-                <td>${o.customerId?.customerName || o.customerId?.name || 'Unknown'}</td>
-                <td class="center">${Array.isArray(o.services) ? o.services.join(', ') : (o.services || '')}</td>
-                <td class="center">${renderReactStatusBadge(o.status)}</td>
-                <td class="center">${o.assignedTailor?.name || 'Unassigned'}</td>
-                <td class="center">${dateStr}</td>
-                <td class="center">
-                    <button class="btn-view" onclick='viewOrder(${JSON.stringify(o)})'>View</button>
+            return `<tr>
+                <td style="font-weight:600;">${o.customerId?.customerName || o.customerId?.name || 'Unknown'}</td>
+                <td style="font-size:14px;">${Array.isArray(o.services) ? o.services.join(', ') : (o.services || '')}</td>
+                <td style="text-align:center;">${renderReactStatusBadge(o.status)}</td>
+                <td>${o.assignedTailor?.name || '—'}</td>
+                <td style="font-size:13px;color:var(--text-secondary);">${dateStr}</td>
+                <td style="text-align:center;">
+                    <button class="btn-view" onclick='viewOrder(${JSON.stringify(o)})'><i data-lucide="eye" style="width:16px;height:16px;margin-right:4px;"></i> View</button>
                 </td>
             </tr>`;
         }).join('');
@@ -111,31 +111,29 @@ async function loadDashboard() {
         document.getElementById('dash-table').style.display = 'table';
         lucide.createIcons();
     } catch(e) {
-        document.getElementById('dash-loading').textContent = 'Error loading. Is backend running on port 5000?';
+        document.getElementById('dash-loading').textContent = 'Error loading Dashboard.';
     }
 }
 
-// Exact React status badge colors
 function renderReactStatusBadge(status) {
-    const styles = {
-        'Completed':   'background:#A7F3D0;color:#047857;',
-        'In Progress': 'background:#FDE68A;color:#B45309;',
-        'Pending':     'background:#E5E7EB;color:#374151;',
-    };
-    const s = styles[status] || 'background:#FF8A8A;color:#FFFFFF;';
-    return `<span style="padding:6px 24px;border-radius:20px;font-size:14px;font-weight:500;${s}">${status}</span>`;
+    if (!status) return `<span class="status-badge status-Pending">—</span>`;
+    const s = status.toLowerCase().replace(/\s+/g, '');
+    let cssClass = 'Pending';
+    if (s === 'completed') cssClass = 'Completed';
+    else if (s === 'inprogress') cssClass = 'InProgress';
+    return `<span class="status-badge status-${cssClass}">${status}</span>`;
 }
 
 function viewOrder(o) {
     document.getElementById('view-order-content').innerHTML = `
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-            <div><p style="font-size:12px;font-weight:600;color:#6B7280;">Customer</p><p style="font-weight:700;">${o.customerId?.customerName||'—'}</p></div>
-            <div><p style="font-size:12px;font-weight:600;color:#6B7280;">Status</p>${renderReactStatusBadge(o.status)}</div>
-            <div><p style="font-size:12px;font-weight:600;color:#6B7280;">Services</p><p>${(o.services||[]).join(', ')||'—'}</p></div>
-            <div><p style="font-size:12px;font-weight:600;color:#6B7280;">Delivery</p><p>${formatDate(o.targetDeliveryDate)}</p></div>
-            <div><p style="font-size:12px;font-weight:600;color:#6B7280;">Tailor</p><p>${o.assignedTailor?.name||'—'}</p></div>
-            <div><p style="font-size:12px;font-weight:600;color:#6B7280;">Payment</p><p>${o.paymentMethod||'—'}</p></div>
-            <div style="grid-column:span 2;"><p style="font-size:12px;font-weight:600;color:#6B7280;">Total</p><p style="font-weight:800;font-size:24px;color:#4F46E5;">₹ ${o.userDefinedTotal||o.calculatedTotal||0}</p></div>
+            <div><p style="font-size:12px;font-weight:600;color:#6B7280;margin-bottom:4px;">Customer</p><p style="font-weight:700;">${o.customerId?.customerName||'—'}</p></div>
+            <div><p style="font-size:12px;font-weight:600;color:#6B7280;margin-bottom:4px;">Status</p>${renderReactStatusBadge(o.status)}</div>
+            <div><p style="font-size:12px;font-weight:600;color:#6B7280;margin-bottom:4px;">Services</p><p>${(o.services||[]).join(', ')||'—'}</p></div>
+            <div><p style="font-size:12px;font-weight:600;color:#6B7280;margin-bottom:4px;">Delivery</p><p>${formatDate(o.targetDeliveryDate)}</p></div>
+            <div><p style="font-size:12px;font-weight:600;color:#6B7280;margin-bottom:4px;">Tailor</p><p>${o.assignedTailor?.name||'—'}</p></div>
+            <div><p style="font-size:12px;font-weight:600;color:#6B7280;margin-bottom:4px;">Payment</p><p>${o.paymentMethod||'—'}</p></div>
+            <div style="grid-column:span 2;"><p style="font-size:12px;font-weight:600;color:#6B7280;margin-bottom:4px;">Total</p><p style="font-weight:800;font-size:24px;color:#4F46E5;">₹ ${o.userDefinedTotal||o.calculatedTotal||0}</p></div>
         </div>`;
     openModal('view-order-modal');
 }

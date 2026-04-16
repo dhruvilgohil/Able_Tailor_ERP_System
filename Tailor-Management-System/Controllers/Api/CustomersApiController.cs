@@ -70,9 +70,21 @@ namespace Tailor_Management_System.Controllers.Api
             var customer = await _context.Customers.FirstOrDefaultAsync(c => c.Id == id && c.UserId == CurrentUserId);
             if (customer == null) return NotFound();
 
+            // CASCADE: Clean up measurements
+            var measurements = await _context.Measurements.Where(m => m.CustomerId == id).ToListAsync();
+            if (measurements.Any()) _context.Measurements.RemoveRange(measurements);
+
+            // CASCADE: Clean up orders and their income items
+            var orders = await _context.Orders.Where(o => o.CustomerId == id).ToListAsync();
+            foreach (var order in orders) {
+                var relatedIncomes = await _context.Incomes.Where(i => i.OrderId == order.Id).ToListAsync();
+                if (relatedIncomes.Any()) _context.Incomes.RemoveRange(relatedIncomes);
+                _context.Orders.Remove(order);
+            }
+
             _context.Customers.Remove(customer);
             await _context.SaveChangesAsync();
-            return Ok(new { message = "Customer deleted" });
+            return Ok(new { _id = id, id = id, message = "Customer deleted" });
         }
     }
 }

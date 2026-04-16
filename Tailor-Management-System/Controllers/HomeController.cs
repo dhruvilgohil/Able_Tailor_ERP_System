@@ -20,10 +20,18 @@ namespace Tailor_Management_System.Controllers
             return null!;
         }
 
+        [Route("")]
+        [Route("index.html")] // Handle old React entrance URL
         public IActionResult Index()
         {
             var redirect = RequireAuth(); if (redirect != null) return redirect;
             return View();
+        }
+
+        [Route("dashboard")] // Alias to handle React's old route
+        public IActionResult Dashboard()
+        {
+            return RedirectToAction("Index");
         }
 
         public IActionResult Orders()

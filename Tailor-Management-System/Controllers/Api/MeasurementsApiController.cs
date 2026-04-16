@@ -39,6 +39,7 @@ namespace Tailor_Management_System.Controllers.Api
             
             // Map to include Customer object as expected by React
             var result = measurements.Select(m => new {
+                _id = m.Id,
                 m.Id,
                 m.UserId,
                 m.CustomerId,
@@ -75,7 +76,13 @@ namespace Tailor_Management_System.Controllers.Api
                 _context.Measurements.Add(measurement);
                 await _context.SaveChangesAsync();
 
-                return Ok(measurement);
+                return Ok(new {
+                    _id = measurement.Id, id = measurement.Id, 
+                    measurement.UserId, measurement.CustomerId,
+                    measurement.Title, measurement.Type,
+                    measurement.ShirtData, measurement.PantData,
+                    measurement.RecordedDate, measurement.CreatedAt, measurement.UpdatedAt
+                });
             } catch (Exception ex) {
                 return BadRequest(new { message = ex.Message });
             }
@@ -95,7 +102,13 @@ namespace Tailor_Management_System.Controllers.Api
             measurement.UpdatedAt = DateTime.UtcNow;
 
             await _context.SaveChangesAsync();
-            return Ok(measurement);
+            return Ok(new {
+                _id = measurement.Id, id = measurement.Id,
+                measurement.UserId, measurement.CustomerId,
+                measurement.Title, measurement.Type,
+                measurement.ShirtData, measurement.PantData,
+                measurement.RecordedDate, measurement.CreatedAt, measurement.UpdatedAt
+            });
         }
 
         [HttpDelete("{id}")]
@@ -104,9 +117,15 @@ namespace Tailor_Management_System.Controllers.Api
             var measurement = await _context.Measurements.FirstOrDefaultAsync(m => m.Id == id && m.UserId == CurrentUserId);
             if (measurement == null) return NotFound();
 
+            // SOFT REMOVAL: Unassign from orders before delete
+            var orders = await _context.Orders.Where(o => o.MeasurementId == id).ToListAsync();
+            foreach (var order in orders) {
+                order.MeasurementId = null;
+            }
+
             _context.Measurements.Remove(measurement);
             await _context.SaveChangesAsync();
-            return Ok(new { message = "Measurement deleted" });
+            return Ok(new { _id = id, id = id, message = "Measurement deleted" });
         }
     }
 }

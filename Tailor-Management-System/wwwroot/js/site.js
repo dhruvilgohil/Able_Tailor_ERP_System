@@ -70,24 +70,35 @@ async function loadNotifications() {
     const list = document.getElementById('notif-list');
     if (!list) return;
     try {
-        const orders = await apiFetch('/api/orders');
-        const pending = orders.filter(o => o.status === 'Pending' || o.status === 'In Progress');
+        // Use session-based endpoint – no JWT required, never fails on token expiry
+        const res = await fetch('/Home/Notifications');
+        if (!res.ok) throw new Error('fetch failed');
+        const pending = await res.json();
+
         const badge = document.getElementById('notif-badge');
         const countBadge = document.getElementById('notif-count-badge');
         const footer = document.getElementById('notif-footer');
+
+        if (pending.error) {
+            list.innerHTML = '<div style="padding:32px;text-align:center;color:#9CA3AF;"><p>Please log in</p></div>';
+            return;
+        }
+
         if (pending.length > 0) {
             if (badge) { badge.style.display = 'flex'; badge.textContent = pending.length; }
             if (countBadge) { countBadge.style.display = 'inline-flex'; countBadge.textContent = pending.length; }
             if (footer) footer.style.display = 'block';
-            list.innerHTML = pending.slice(0, 10).map(o => `
-                <div style="padding:12px 16px;border-bottom:1px solid #F3F4F6;">
-                    <p style="font-weight:600;font-size:14px;color:#111827;">${o.customerId?.customerName || 'Order #' + o._id}</p>
-                    <p style="font-size:12px;color:#6B7280;">${(o.services || []).join(', ') || 'No services'}</p>
+            list.innerHTML = pending.map(o => {
+                const services = (() => { try { const s = JSON.parse(o.services); return Array.isArray(s) ? s.join(', ') : (s || 'No services'); } catch { return o.services || 'No services'; } })();
+                return `<div style="padding:12px 16px;border-bottom:1px solid #F3F4F6;">
+                    <p style="font-weight:600;font-size:14px;color:#111827;margin:0 0 2px;">${o.customerName || 'Order #' + o.id}</p>
+                    <p style="font-size:12px;color:#6B7280;margin:0 0 4px;">${services}</p>
                     <span style="font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;background:${o.status === 'Pending' ? '#E5E7EB' : '#FDE68A'};color:${o.status === 'Pending' ? '#374151' : '#B45309'};">${o.status}</span>
-                </div>`).join('');
+                </div>`;
+            }).join('');
         } else {
             if (badge) badge.style.display = 'none';
-            list.innerHTML = '<div style="padding:32px;text-align:center;color:#9CA3AF;"><p>No pending orders</p></div>';
+            list.innerHTML = '<div style="padding:32px;text-align:center;color:#9CA3AF;"><p>No pending orders 🎉</p></div>';
         }
     } catch {
         list.innerHTML = '<div style="padding:32px;text-align:center;color:#9CA3AF;">Failed to load</div>';

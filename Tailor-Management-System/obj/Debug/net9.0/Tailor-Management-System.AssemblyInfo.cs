@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tailor-Management-System")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+862b979a5d460d0ddecf0327db340f12e9cdd8ad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39d6521d439b35b7b8d470ecfce24ce38a6fe149")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tailor-Management-System")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tailor-Management-System")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

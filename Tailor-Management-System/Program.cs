@@ -44,6 +44,7 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
+builder.Services.AddHttpClient();
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddCors(options =>

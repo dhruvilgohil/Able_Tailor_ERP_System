@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Net.Http;
 using System.Security.Claims;
 using System.Text;
 using System.Text.Json;
@@ -16,11 +17,13 @@ namespace Tailor_Management_System.Controllers
     {
         private readonly TailorDbContext _context;
         private readonly IConfiguration _config;
+        private readonly IHttpClientFactory _httpClientFactory;
 
-        public AuthController(TailorDbContext context, IConfiguration config)
+        public AuthController(TailorDbContext context, IConfiguration config, IHttpClientFactory httpClientFactory)
         {
             _context = context;
             _config = config;
+            _httpClientFactory = httpClientFactory;
         }
 
         [HttpGet]
@@ -184,6 +187,67 @@ namespace Tailor_Management_System.Controllers
             return RedirectToAction("Login", "Auth");
         }
 
+        // ── Google One-Tap Sign-In ────────────────────────────────────────────────
+        [HttpPost]
+        public async Task<IActionResult> GoogleLogin([FromBody] GoogleLoginRequest request)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(request?.Token))
+                    return Json(new { success = false, message = "No credential token received." });
+
+                // Verify the Google ID token by calling Google's tokeninfo endpoint
+                var client = _httpClientFactory.CreateClient();
+                var verifyUrl = $"https://oauth2.googleapis.com/tokeninfo?id_token={request.Token}";
+                var verifyResponse = await client.GetAsync(verifyUrl);
+
+                if (!verifyResponse.IsSuccessStatusCode)
+                    return Json(new { success = false, message = "Google token verification failed." });
+
+                var json = await verifyResponse.Content.ReadAsStringAsync();
+                using var doc = JsonDocument.Parse(json);
+                var root = doc.RootElement;
+
+                // Extract claims from the verified token
+                var email = root.TryGetProperty("email", out var emailProp) ? emailProp.GetString() : null;
+                var name  = root.TryGetProperty("name",  out var nameProp)  ? nameProp.GetString()  : null;
+                var emailVerified = root.TryGetProperty("email_verified", out var evProp) ? evProp.GetString() : "false";
+
+                if (string.IsNullOrWhiteSpace(email) || emailVerified != "true")
+                    return Json(new { success = false, message = "Email not verified by Google." });
+
+                // Find or create the local user
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+                if (user == null)
+                {
+                    user = new User
+                    {
+                        FullName  = name ?? email,
+                        ShopName  = "My Shop",
+                        Email     = email,
+                        Password  = BCrypt.Net.BCrypt.HashPassword(Guid.NewGuid().ToString()) // random password
+                    };
+                    _context.Users.Add(user);
+                    await _context.SaveChangesAsync();
+                }
+
+                // Issue our own JWT and set session
+                var token = GenerateJwtToken(user);
+                HttpContext.Session.SetString("token",    token);
+                HttpContext.Session.SetString("userId",   user.Id.ToString());
+                HttpContext.Session.SetString("fullName", user.FullName);
+                HttpContext.Session.SetString("shopName", user.ShopName);
+                HttpContext.Session.SetString("email",    user.Email);
+
+                return Json(new { success = true });
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine("[GoogleLogin] Error: " + ex.Message);
+                return Json(new { success = false, message = "Server error during Google Sign-In." });
+            }
+        }
+
         private string GenerateJwtToken(User user)
         {
             var jwtSettings = _config.GetSection("Jwt");
@@ -216,6 +280,12 @@ namespace Tailor_Management_System.Controllers
             public string ShopName { get; set; } = string.Empty;
             public string Email { get; set; } = string.Empty;
             public string Password { get; set; } = string.Empty;
+        }
+
+        // Helper class for Google login request
+        public class GoogleLoginRequest
+        {
+            public string Token { get; set; } = string.Empty;
         }
     }
 }

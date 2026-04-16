@@ -688,4 +688,4 @@ D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_
 D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\obj\Debug\net9.0\Tailor-Management-System.genruntimeconfig.cache
 D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\obj\Debug\net9.0\ref\Tailor-Management-System.dll
 D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
-D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\obj\Debug\net9.0\compressed\xsnn8f03b5-b7k9bhezpj.gz
+D:\.net\Able_Tailor_ERP_System - Copy\Able_Tailor_ERP_System - Copy - Copy\Able_Tailor_ERP_System\Tailor-Management-System\obj\Debug\net9.0\compressed\xsnn8f03b5-eqeld5gq40.gz
